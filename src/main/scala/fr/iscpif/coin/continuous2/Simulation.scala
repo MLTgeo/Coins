@@ -20,7 +20,7 @@ object Simulation extends App {
   val townMatrix = 
     Source.fromFile(towns).getLines.drop(1).filterNot(_.matches(" *")).map {
       l => l.split("\t").toArray
-    }.toArray
+    }
   
   val cities = townMatrix.map {
     line =>
@@ -30,7 +30,7 @@ object Simulation extends App {
     val idCountry = line(3).toInt
     val rank = line(4).toInt
     new City(idCity, idCountry, rank) 
-  }
+  }.toIndexedSeq
     
   
   def gaussian(sigma: Double, average: Double, rng: Random) = clampedGaussian(rng) * sigma + average
@@ -53,8 +53,8 @@ object Simulation extends App {
   
   val rng = new Random(0)
     
-  for(mobilRate2 <- 0.0 to 0.2 by 0.1 par; pop <- 0 to 2000 by 1000 par; repli <- 0 until 100 par)
-    model.generateEchanges(repli, mobilRate2, pop, cities, resultsDir + "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt", rng.nextLong)
+  for(mobilRate2 <- 0.0 to 0.2 by 0.1 par; pop <- 0 to 2000 by 1000 par; repli <- 0 until 10 par)
+    model.generateEchanges(repli, Vector(mobilRate2, 0.1), Vector(pop, 1000), cities, resultsDir + "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt", rng.nextLong)
 
   
 }

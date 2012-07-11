@@ -5,16 +5,12 @@
 
 package fr.iscpif.coin.continuous2
 
-class ContinuousWallet(val coins: Array[Array[Double]]) {
+class ContinuousWallet(val coins: Array[Double]) {
 
-  def apply(value: Int, cityId: Int): Double = coins(value)(cityId)
-  def update(value: Int, cityId: Int, nb: Double) = coins(value)(cityId) = nb
+  def apply(cityId: Int): Double = coins(cityId)
+  def update(cityId: Int, nb: Double) = coins(cityId) = nb
 
-  def apply(value: Int): Array[Double] = coins(value)
-      
-  def byValue = coins.zipWithIndex.map { case (coins, value) => (value, coins.sum) }
-    
   def +=(wallet: ContinuousWallet) = 
-    for((coinsForCities, i) <- wallet.coins.zipWithIndex ; 
-        (value, j) <- coinsForCities.zipWithIndex) this(i, j) += value
+    wallet.coins.zipWithIndex.foreach { case(c, i) => coins(i) += c }
+  
 }

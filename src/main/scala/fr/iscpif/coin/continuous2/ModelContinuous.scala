@@ -23,148 +23,146 @@ trait ModelContinuous {
   
   def exchangeLaw(value: Int, rng: Random): Double
  
-  val POP1 = 1000
-  val POP2 = 1000
+  /*val POP1 = 1000
+   val POP2 = 1000*/
     
   val mobilRate1 = 0.1
   val mobilRate2 = 0.1
     
-  val coins = List(1.0, 1.0)
   val exchangeRate = 0.5   
-  
+  val initialCoins = 1.0
+
   val steps = 200
   
-  def population(city: City) = (if (city==1) POP1 else POP2).toInt
-  def defmobilRate(city: City)= if (city==1) mobilRate1 else mobilRate2 
+  def generateEchanges(expe: Int, mobilRates: IndexedSeq[Double], populations: IndexedSeq[Int], cities: IndexedSeq[City], file: String,  seed: Long) = {
+    def population(city: City) = populations(city.id)
+    def mobilRate(city: City)= mobilRates(city.id)
     
-  def generateEchanges(expe: Int, mobilRate: Double, POP: Int, cities: Array[City], file: String,  seed: Long) = {
     val rng = new RandomAdaptor(new Well44497a(seed))
     val fw = new BufferedWriter(new FileWriter(new File(file)))
     
     try {
     
-    def buildWallet(city: City, nbCities: Int, coins: List[Double]) = {
-      val wallet = buildEmptyWallet(coins.size, nbCities)
-      for((coin, index) <- coins.zipWithIndex) wallet(index)(city.id) = coin
-      wallet
-    } 
+      def buildWallet(city: City, nbCities: Int) = 
+        new ContinuousWallet(
+          Array.tabulate(nbCities)(
+            i => if(i == city.id) initialCoins else 0.0
+          )
+        )
+
+      val mobilAgents = 
+        cities.flatMap {
+          _city => 
+          val nb = round(population(_city) * mobilRate(_city)).toInt
+          (0 until nb).map{
+            i => new ContinuousMobilAgent {
+              val city = _city
+              val wallet = buildWallet(_city, cities.size)
+            }
+          }
+        }
+  
+      val staticAgents = 
+        cities.flatMap {
+          _city => 
+          val nb = population(_city) //round(population(city.rank) * (1-mobilRate)).toInt
+          (0 until nb).map{
+            i => new ContinuousStaticAgent {
+              val city = _city
+              val wallet = buildWallet(_city, cities.size)
+            }
+          }
+        }
     
-    def buildEmptyWallet(nbCoins: Int, nbCities: Int) = new ContinuousWallet(Array.fill(nbCoins, nbCities)(0.0))
+      val allAgents = mobilAgents ++ staticAgents
   
-    val mobilAgents = 
-      cities.flatMap {
-        _city => 
-        val nb = round(population(_city) * mobilRate).toInt
-        (0 until nb).map{
-          i => new ContinuousMobilAgent {
-            val city = _city
-            val wallet = buildWallet(_city, cities.size, coins)
+      def updateAgents(
+        mobilAgents: Iterable[ContinuousMobilAgent], 
+        staticAgents: Iterable[ContinuousStaticAgent]) = {
+        val mobilMoves = 
+          mobilAgents.map {
+            agent => (agent, cities.filter(_ != agent.city).head)
           }
-        }
-        
-      }
-  
-    val staticAgents = 
-      cities.flatMap {
-        _city => 
-        val nb = population(_city) //round(population(city.rank) * (1-mobilRate)).toInt
-        (0 until nb).map{
-          i => new ContinuousStaticAgent {
-            val city = _city
-            val wallet = buildWallet(_city, cities.size, coins)
-          }
-        }
-      }
-    
-    val allAgents = mobilAgents ++ staticAgents
-  
-    def updateAgents(
-      mobilAgents: Iterable[ContinuousMobilAgent], 
-      staticAgents: Iterable[ContinuousStaticAgent]) = {
-      val mobilMoves = 
-        mobilAgents.map {
-          agent => (agent, cities.filter(_ != agent.city).head)
-          }
-      val mobilHome =
-        mobilAgents.map {
-          agent => (agent, cities.filter(_ == agent.city).head)
+        val mobilHome =
+          mobilAgents.map {
+            agent => (agent, cities.filter(_ == agent.city).head)
           }
       
-      val staticMoves = 
-        staticAgents.map{
-          agent => (agent, agent.city)
-        }
+        val staticMoves = 
+          staticAgents.map{
+            agent => (agent, agent.city)
+          }
   
-      val moves = 
-        (mobilMoves ++ staticMoves).groupBy {
-          case (_, destination) => destination
+        val moves = 
+          (mobilMoves ++ staticMoves).groupBy {
+            case (_, destination) => destination
+          }
+      
+        val homes =
+          (mobilHome ++ staticMoves).groupBy {
+            case (_, location) => location
+          }
+  
+        moves.map {
+          case(city, agentsCity) =>
+            val agentsInCityArray = agentsCity.map{case(agent,_) => agent}.toArray
+            val nbExchange = round(agentsCity.size * exchangeRate).toInt
+            for(i <- 0 until nbExchange) {
+              val firstAgent = agentsInCityArray(rng.nextInt(agentsCity.size))
+              val secondAgent = agentsInCityArray(rng.nextInt(agentsCity.size))
+              exchange(firstAgent, secondAgent)
+            }
         }
       
-      val homes =
-        (mobilHome ++ staticMoves).groupBy {
-          case (_, location) => location
+        homes.map {
+          case(city, agentsCity) =>
+            val agentsInCityArray = agentsCity.map{case(agent,_) => agent}.toArray
+            val nbExchange = round(agentsCity.size * exchangeRate).toInt
+            for(i <- 0 until nbExchange) {
+              val firstAgent = agentsInCityArray(rng.nextInt(agentsCity.size))
+              val secondAgent = agentsInCityArray(rng.nextInt(agentsCity.size))
+              exchange(firstAgent, secondAgent)
+            }
+        }   
+      }
+  
+      def exchange(firstAgent: ContinuousAgent, secondAgent: ContinuousAgent) =
+        for(city <- cities) {
+          val average = (firstAgent.wallet(city.id) + secondAgent.wallet(city.id)) / 2
+          firstAgent.wallet(city.id) = average
+          secondAgent.wallet(city.id) = average
         }
-  
-      moves.map {
-        case(city, agentsCity) =>
-          val agentsInCityArray = agentsCity.map{case(agent,_) => agent}.toArray
-          val nbExchange = round(agentsCity.size * exchangeRate).toInt
-          for(i <- 0 until nbExchange) {
-            val firstAgent = agentsInCityArray(rng.nextInt(agentsCity.size))
-            val secondAgent = agentsInCityArray(rng.nextInt(agentsCity.size))
-            exchange(firstAgent, secondAgent)
-          }
-      }
-      
-      homes.map {
-        case(city, agentsCity) =>
-          val agentsInCityArray = agentsCity.map{case(agent,_) => agent}.toArray
-          val nbExchange = round(agentsCity.size * exchangeRate).toInt
-          for(i <- 0 until nbExchange) {
-            val firstAgent = agentsInCityArray(rng.nextInt(agentsCity.size))
-            val secondAgent = agentsInCityArray(rng.nextInt(agentsCity.size))
-            exchange(firstAgent, secondAgent)
-          }
-      }   
-    }
-  
-    def exchange(firstAgent: ContinuousAgent, secondAgent: ContinuousAgent) =
-      for(city <- cities ; value <- 0 until coins.size) {
-        val average = (firstAgent.wallet(value, city.id) + secondAgent.wallet(value, city.id)) / 2
-        firstAgent.wallet(value, city.id) = average
-        secondAgent.wallet(value, city.id) = average
-      }
  
-           
-    def proportion(wallet: ContinuousWallet) = 
-      wallet.coins.map { 
-        coinsByCity => 
-        val total = coinsByCity.sum.toDouble
-        coinsByCity.map (v => v / total)
+      
+      def proportion(wallet: ContinuousWallet) = {
+        val totalInWallet = wallet.coins.sum
+        wallet.coins.map { _ / totalInWallet }
       }
-
     
-    def aggregateWallets(agents: Iterable[ContinuousAgent], nbCoins: Int, nbCities: Int) = {
-      val cityWallets = Array.fill(nbCities)(buildEmptyWallet(nbCoins, nbCities))
-      for(agent <- agents) cityWallets(agent.city.id) += agent.wallet
-      cityWallets
-    }
-  
-    def outputArray(day: Int, proportion: Array[Array[Array[Double]]]) = 
-      (expe :: day :: mobilRate :: POP :: proportion.toList.flatten.flatten).toArray
+      def aggregateWallets(agents: Iterable[ContinuousAgent], nbCities: Int) =
+        agents.groupBy(_.city.id).map {
+          case(id, cityAgents) =>
+            val cityWallets = new ContinuousWallet(Array.fill(nbCities)(0.0))
+            for(agent <- cityAgents) cityWallets += agent.wallet
+            id -> cityWallets
+        }.toArray.sortBy{ case(id, _) => id }.unzip._2.map{proportion}
 
   
-    def writeLine(day: Int) = fw.synchronized {
-      fw.append(
-        outputArray(day, aggregateWallets(allAgents, coins.size, cities.size).map{proportion}).mkString(",")
-      )
-      fw.append('\n')
-    }
+      def outputArray(day: Int, proportion: Array[Array[Double]]) = 
+        (expe :: day :: mobilRates.toList ::: populations.toList ::: proportion.toList.flatten)
+
   
-    writeLine(0)
-    for(d <- 1 to steps) {
-      updateAgents(mobilAgents, staticAgents)
-      writeLine(d)
+      def writeLine(day: Int) = fw.synchronized {
+        fw.append(
+          outputArray(day, aggregateWallets(allAgents, cities.size).toArray).mkString(",")
+        )
+        fw.append('\n')
+      }
+  
+      writeLine(0)
+      for(d <- 1 to steps) {
+        updateAgents(mobilAgents, staticAgents)
+        writeLine(d)
       }
       
     } finally fw.close
