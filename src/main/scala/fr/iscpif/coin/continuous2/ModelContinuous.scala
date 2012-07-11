@@ -22,13 +22,7 @@ import scala.runtime.ScalaRunTime._
 trait ModelContinuous {
   
   def exchangeLaw(value: Int, rng: Random): Double
- 
-  /*val POP1 = 1000
-   val POP2 = 1000*/
-    
-  val mobilRate1 = 0.1
-  val mobilRate2 = 0.1
-    
+
   val exchangeRate = 0.5   
   val initialCoins = 1.0
 
