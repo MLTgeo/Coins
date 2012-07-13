@@ -28,7 +28,14 @@ trait ModelContinuous {
 
   val steps = 200
   
-  def generateEchanges(expe: Int, mobilRates: IndexedSeq[Double], populations: IndexedSeq[Int], cities: IndexedSeq[City], file: String,  seed: Long) = {
+  def generateEchanges(
+    expe: Int,
+    mobilRates: IndexedSeq[Double],
+    populations: IndexedSeq[Int],
+    cities: IndexedSeq[City],
+    file: String,
+    seed: Long) = {
+    
     def population(city: City) = populations(city.id)
     def mobilRate(city: City)= mobilRates(city.id)
     
