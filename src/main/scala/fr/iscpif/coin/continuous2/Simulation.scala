@@ -53,7 +53,7 @@ object Simulation extends App {
   
   val rng = new Random(0)
     
-  for(mobilRate2 <- 0.0 to 0.2 by 0.1 par; pop <- 0 to 2000 by 1000 par; repli <- 0 until 10 par)
+  for(mobilRate2 <- 0.01 to 0.2 by 0.02 par; pop <- 100 to 2000 by 200 par; repli <- 0 until 100 par)
     model.generateEchanges(repli, Vector(mobilRate2, 0.1), Vector(pop, 1000), cities, resultsDir + "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt", rng.nextLong)
 
   
