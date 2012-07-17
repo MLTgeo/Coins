@@ -23,21 +23,22 @@ trait ModelContinuous {
   
   def exchangeLaw(value: Int, rng: Random): Double
  
-  val POP1 = 1000
-  val POP2 = 1000
-    
-  val mobilRate1 = 0.1
-  val mobilRate2 = 0.1
-    
   val coins = List(1.0, 1.0)
   val exchangeRate = 0.5   
   
   val steps = 200
-  
-  def population(city: City) = (if (city==1) POP1 else POP2).toInt
-  def defmobilRate(city: City)= if (city==1) mobilRate1 else mobilRate2 
     
-  def generateEchanges(expe: Int, mobilRate: Double, POP: Int, cities: Array[City], file: String,  seed: Long) = {
+  def generateEchanges(
+    expe: Int,
+    mobilRates: IndexedSeq[Double],
+    populations: IndexedSeq[Int],
+    cities: IndexedSeq[City],
+    file: String,
+    seed: Long) = {
+    
+    def population(city: City) = populations(city.id)
+    def mobilRate(city: City)= mobilRates(city.id)
+    
     val rng = new RandomAdaptor(new Well44497a(seed))
     val fw = new BufferedWriter(new FileWriter(new File(file)))
     
@@ -54,7 +55,7 @@ trait ModelContinuous {
     val mobilAgents = 
       cities.flatMap {
         _city => 
-        val nb = round(population(_city) * mobilRate).toInt
+        val nb = round(population(_city) * mobilRate(_city)).toInt
         (0 until nb).map{
           i => new ContinuousMobilAgent {
             val city = _city
@@ -152,7 +153,7 @@ trait ModelContinuous {
     }
   
     def outputArray(day: Int, proportion: Array[Array[Array[Double]]]) = 
-      (expe :: day :: mobilRate :: POP :: proportion.toList.flatten.flatten).toArray
+      (expe :: day :: mobilRates :: populations :: proportion.toList.flatten.flatten).toArray
 
   
     def writeLine(day: Int) = fw.synchronized {
