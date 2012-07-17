@@ -53,13 +53,19 @@ object Simulation extends App {
   
   val rng = new Random(0)
   
-  def compute(mobilRate2: Double, pop: Int, repli: Int)  = 
-// for(mobilRate2 <- 0.0 to 0.2 by 0.01 par; pop <- 0 to 2000 by 200 par; repli <- 0 until 100 par)
-  model.generateEchanges(repli, Vector(mobilRate2, 0.1), Vector(pop, 1000), cities, resultsDir + "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt", rng.nextLong)
-
-  def compute : Unit = 
-    for(mobilRate2 <- 0.0 to 0.2 by 0.01 par; pop <- 0 to 2000 by 200 par; repli <- 0 until 100 par)
-      compute(mobilRate2,pop,repli)
+  if (args.size == 5)
+    compute(args(2).toInt,args(3).toDouble,args(4).toInt)
   
+  else
+    for(mobilRate2 <- 0.0 to 0.2 by 0.01 par; pop <- 0 to 2000 by 200 par; repli <- 0 until 100 par)
+      compute(repli,mobilRate2,pop)
+  
+  def compute(repli : Int,
+              mobilRate2 : Double,
+              pop : Int) = model.generateEchanges(repli, 
+                                                    Vector(mobilRate2, 0.1), 
+                                                    Vector(pop, 1000), 
+                                                    cities, 
+                                                    resultsDir + "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt", rng.nextLong)
 }
   
