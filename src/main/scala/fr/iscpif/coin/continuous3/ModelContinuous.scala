@@ -23,8 +23,8 @@ trait ModelContinuous {
   
   def exchangeLaw(value: Int, rng: Random): Double
  
-  val coins = List(1.0, 1.0)
   val exchangeRate = 0.5   
+  val initialCoins = 1.0   
   
   val steps = 200
     
@@ -43,15 +43,14 @@ trait ModelContinuous {
     val fw = new BufferedWriter(new FileWriter(new File(file)))
     
     try {
+     
+    def buildWallet(city: City, nbCities: Int) = 
+        new ContinuousWallet(
+          Array.tabulate(nbCities)(
+            i => if(i == city.id) initialCoins else 0.0
+          )
+        )  
     
-    def buildWallet(city: City, nbCities: Int, coins: List[Double]) = {
-      val wallet = buildEmptyWallet(coins.size, nbCities)
-      for((coin, index) <- coins.zipWithIndex) wallet(index)(city.id) = coin
-      wallet
-    } 
-    
-    def buildEmptyWallet(nbCoins: Int, nbCities: Int) = new ContinuousWallet(Array.fill(nbCoins, nbCities)(0.0))
-  
     val mobilAgents = 
       cities.flatMap {
         _city => 
@@ -59,7 +58,7 @@ trait ModelContinuous {
         (0 until nb).map{
           i => new ContinuousMobilAgent {
             val city = _city
-            val wallet = buildWallet(_city, cities.size, coins)
+            val wallet = buildWallet(_city, cities.size)
           }
         }
         
@@ -72,7 +71,7 @@ trait ModelContinuous {
         (0 until nb).map{
           i => new ContinuousStaticAgent {
             val city = _city
-            val wallet = buildWallet(_city, cities.size, coins)
+            val wallet = buildWallet(_city, cities.size)
           }
         }
       }
@@ -130,39 +129,37 @@ trait ModelContinuous {
     }
   
     def exchange(firstAgent: ContinuousAgent, secondAgent: ContinuousAgent) =
-      for(city <- cities ; value <- 0 until coins.size) {
-       val FirstMoneyBag = firstAgent.wallet(value, city.id)
-       val SecondMoneyBag = secondAgent.wallet(value, city.id) 
-       firstAgent.wallet(value, city.id) = SecondMoneyBag
-       secondAgent.wallet(value, city.id) = FirstMoneyBag
+      for(city <- cities) {
+       val FirstMoneyBag = firstAgent.wallet(city.id)
+       val SecondMoneyBag = secondAgent.wallet(city.id) 
+       firstAgent.wallet(city.id) = SecondMoneyBag
+       secondAgent.wallet(city.id) = FirstMoneyBag
       }
- 
-           
-    def proportion(wallet: ContinuousWallet) = 
-      wallet.coins.map { 
-        coinsByCity => 
-        val total = coinsByCity.sum.toDouble
-        coinsByCity.map (v => v / total)
+               
+    def proportion(wallet: ContinuousWallet) = {
+        val totalInWallet = wallet.coins.sum
+        wallet.coins.map { _ / totalInWallet }
       }
-
-    
-    def aggregateWallets(agents: Iterable[ContinuousAgent], nbCoins: Int, nbCities: Int) = {
-      val cityWallets = Array.fill(nbCities)(buildEmptyWallet(nbCoins, nbCities))
-      for(agent <- agents) cityWallets(agent.city.id) += agent.wallet
-      cityWallets
-    }
+         
+    def aggregateWallets(agents: Iterable[ContinuousAgent], nbCities: Int) =
+        agents.groupBy(_.city.id).map {
+          case(id, cityAgents) =>
+            val cityWallets = new ContinuousWallet(Array.fill(nbCities)(0.0))
+            for(agent <- cityAgents) cityWallets += agent.wallet
+            id -> cityWallets
+        }.toArray.sortBy{ case(id, _) => id }.unzip._2.map{proportion}
   
-    def outputArray(day: Int, proportion: Array[Array[Array[Double]]]) = 
-      (expe :: day :: mobilRates :: populations :: proportion.toList.flatten.flatten).toArray
-
+  
+    def outputArray(day: Int, proportion: Array[Array[Double]]) = 
+      (expe :: day :: mobilRates.toList ::: populations.toList ::: proportion.toList.flatten)
   
     def writeLine(day: Int) = fw.synchronized {
       fw.append(
-        outputArray(day, aggregateWallets(allAgents, coins.size, cities.size).map{proportion}).mkString(",")
+        outputArray(day, aggregateWallets(allAgents, cities.size).toArray).mkString(",")
       )
       fw.append('\n')
     }
-  
+      
     writeLine(0)
     for(d <- 1 to steps) {
       updateAgents(mobilAgents, staticAgents)
