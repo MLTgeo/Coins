@@ -57,7 +57,7 @@ object Simulation extends App {
     compute(args(2).toInt,args(3).toDouble,args(4).toInt)
   
   else
-    for(mobilRate2 <- 0.0 to 0.2 by 0.01 par; pop <- 0 to 2000 by 200 par; repli <- 0 until 100 par)
+    for(mobilRate2 <- 0.01 to 0.2 by 0.02 par; pop <- 100 to 2000 by 200 par; repli <- 0 until 100 par)
       compute(repli,mobilRate2,pop)
   
   def compute(repli : Int,
