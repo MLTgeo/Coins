@@ -10,15 +10,16 @@ import java.io.File
 import java.util.Random
 import scala.annotation.tailrec
 import scala.io.Source
+import fr.iscpif.coin.tool.Parse
 
 object Simulation extends App {
-  
-  val towns = args(0) 
-  val resultsDir = args(1) 
-  new File(resultsDir).mkdirs
+
+  val param = Parse(args)
+
+  param.results.mkdirs
   
   val townMatrix = 
-    Source.fromFile(towns).getLines.drop(1).filterNot(_.matches(" *")).map {
+    Source.fromFile(param.towns).getLines.drop(1).filterNot(_.matches(" *")).map {
       l => l.split("\t").toArray
     }
   
@@ -52,12 +53,8 @@ object Simulation extends App {
     
   
   val rng = new Random(0)
-  
-  if (args.size == 5)
-    compute(args(2).toInt,args(3).toDouble,args(4).toInt)
-  
-  else
-    for(mobilRate2 <- 0.01 to 0.2 by 0.02 par; pop <- 100 to 2000 by 200 par; repli <- 0 until 100 par)
+
+  for(mobilRate2 <- param.mobilRates par; pop <- param.populations par; repli <- 0 until 100 par)
       compute(repli,mobilRate2,pop)
   
   def compute(repli : Int,
@@ -66,6 +63,6 @@ object Simulation extends App {
                                                     Vector(mobilRate2, 0.1), 
                                                     Vector(pop, 1000), 
                                                     cities, 
-                                                    resultsDir + "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt", rng.nextLong)
+                                                    new File(param.results, "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt"), rng.nextLong)
 }
   

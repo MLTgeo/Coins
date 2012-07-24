@@ -33,14 +33,14 @@ trait ModelContinuous {
     mobilRates: IndexedSeq[Double],
     populations: IndexedSeq[Int],
     cities: IndexedSeq[City],
-    file: String,
+    file: File,
     seed: Long) = {
     
     def population(city: City) = populations(city.id)
     def mobilRate(city: City)= mobilRates(city.id)
     
     val rng = new RandomAdaptor(new Well44497a(seed))
-    val fw = new BufferedWriter(new FileWriter(new File(file)))
+    val fw = new BufferedWriter(new FileWriter(file))
     
     try {
      
