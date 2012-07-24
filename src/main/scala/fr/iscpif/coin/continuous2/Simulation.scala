@@ -10,15 +10,16 @@ import java.io.File
 import java.util.Random
 import scala.annotation.tailrec
 import scala.io.Source
+import fr.iscpif.coin.tool.Parse
 
 object Simulation extends App {
   
-  val towns = args(0) 
-  val resultsDir = args(1) 
-  new File(resultsDir).mkdirs
+  val param = Parse(args)
+
+  param.results.mkdirs
   
   val townMatrix = 
-    Source.fromFile(towns).getLines.drop(1).filterNot(_.matches(" *")).map {
+    Source.fromFile(param.towns).getLines.drop(1).filterNot(_.matches(" *")).map {
       l => l.split("\t").toArray
     }
   
@@ -50,12 +51,17 @@ object Simulation extends App {
       override val steps = 1000
     }
     
+ val rng = new Random(0)
   
-  val rng = new Random(0)
-    
-  for(mobilRate2 <- 0.0 to 0.2 by 0.01 par; pop <- 0 to 2000 by 200 par; repli <- 0 until 100 par)
-    model.generateEchanges(repli, Vector(mobilRate2, 0.1), Vector(pop, 1000), cities, resultsDir + "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt", rng.nextLong)
-
+ for(mobilRate2 <- param.mobilRates par; pop <- param.populations par; repli <- 0 until 100 par)
+      compute(repli,mobilRate2,pop)
   
+  def compute(repli : Int,
+              mobilRate2 : Double,
+              pop : Int) = model.generateEchanges(repli, 
+                                                    Vector(mobilRate2, 0.1), 
+                                                    Vector(pop, 1000), 
+                                                    cities, 
+                                                    new File(param.results, "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt"), rng.nextLong)
 }
   

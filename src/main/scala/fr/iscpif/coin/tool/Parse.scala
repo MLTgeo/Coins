@@ -24,7 +24,7 @@ object Parse {
       opt("r", "results", "Dir for outputs") {
         (v: String, c: Config) ⇒ c.copy(resultDir = Some(v))
       },
-      opt("m", "mobilrates", "Mobil rate interval in format min, max, step") {
+      opt("m", "mobilrates", "Mobile rate interval in format min, max, step") {
         (v: String, c: Config) ⇒ c.copy(mobilRates = Some(v))
       },
       opt("p", "populations", "Population interval in format min, max, step") {
@@ -39,13 +39,13 @@ object Parse {
     parser.parse(args, Config()) map {
       c => new {
         val towns = new File(c.towns.getOrElse(error("Towns not defined")))
-        val results = new File(c.resultDir.getOrElse(error("Resuts not defined")))
+        val results = new File(c.resultDir.getOrElse(error("Results not defined")))
         val mobilRates = {
-          val i = parseInterval(c.mobilRates.getOrElse(error("Mobil rate interval not defined")))
+          val i = parseInterval(c.mobilRates.getOrElse(error("Mobile rate interval not defined")))
           i(0).toDouble to i(1).toDouble by i(2).toDouble
         }
         val populations = {
-          val i = parseInterval(c.populations.getOrElse(error("Mobil rate interval not defined")))
+          val i = parseInterval(c.populations.getOrElse(error("Mobile rate interval not defined")))
           i(0).toInt to i(1).toInt by i(2).toInt
         }
         
