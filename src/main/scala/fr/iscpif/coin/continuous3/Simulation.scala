@@ -60,8 +60,8 @@ object Simulation extends App {
   def compute(repli : Int,
               mobilRate2 : Double,
               pop : Int) = model.generateEchanges(repli, 
-                                                    Vector(mobilRate2, 0.005), 
-                                                    Vector(pop, 1500), 
+                                                    Vector(mobilRate2, 0.01), 
+                                                    Vector(pop, 1000), 
                                                     cities, 
                                                     new File(param.results, "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt"), rng.nextLong)
 }
