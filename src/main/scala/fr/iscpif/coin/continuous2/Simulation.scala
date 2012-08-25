@@ -48,7 +48,7 @@ object Simulation extends App {
         case 0 => gaussian(1, 1, rng)
         case 1 => gaussian(1, 1, rng)
       }
-      override val steps = 1000
+      override val steps = 200
     }
     
  val rng = new Random(0)
@@ -59,7 +59,7 @@ object Simulation extends App {
   def compute(repli : Int,
               mobilRate2 : Double,
               pop : Int) = model.generateEchanges(repli, 
-                                                    Vector(mobilRate2, 0.1), 
+                                                    Vector(mobilRate2, 0.005), 
                                                     Vector(pop, 1000), 
                                                     cities, 
                                                     new File(param.results, "result" + mobilRate2 + "_" + pop + "_"+ repli + ".txt"), rng.nextLong)
