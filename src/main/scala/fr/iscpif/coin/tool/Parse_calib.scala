@@ -46,7 +46,7 @@ object Parse_calib {
         }
         val mobilRate2 = {
           val i = parseInterval(c.mobilRate2.getOrElse(error("Mobile rate interval not defined")))
-          i(0).toInt to i(1).toInt by i(2).toInt
+          i(0).toDouble to i(1).toDouble by i(2).toDouble
         }
         
       }
