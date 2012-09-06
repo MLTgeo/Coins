@@ -14,7 +14,7 @@ import fr.iscpif.coin.tool.Parse
 
 object Simulation_calib extends App {
   
-  val param = Parse(args)
+  val param = Parse_calib(args)
 
   param.results.mkdirs
   
