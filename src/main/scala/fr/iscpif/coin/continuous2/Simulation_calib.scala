@@ -12,7 +12,7 @@ import scala.annotation.tailrec
 import scala.io.Source
 import fr.iscpif.coin.tool.Parse
 
-object Simulation extends App {
+object Simulation_calib extends App {
   
   val param = Parse(args)
 
@@ -58,8 +58,8 @@ object Simulation extends App {
   
   def compute(repli : Int,
               mobilRate1 : Double,
-              mobilRate1 : Double) = model.generateEchanges(repli, 
-                                                    Vector(mobilRate1, mobilRate2), 
+              mobilRate2 : Double) = model.generateEchanges(repli, 
+                                                    Array(mobilRate1, mobilRate2), 
                                                     Vector(654, 3328), 
                                                     cities, 
                                                     new File(param.results, "result" + mobilRate1 + "_" + mobilRate2 + "_"+ repli + ".txt"), rng.nextLong)
