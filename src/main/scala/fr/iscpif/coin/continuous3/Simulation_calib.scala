@@ -6,11 +6,12 @@
 package fr.iscpif.coin.continuous3
 
 import fr.iscpif.coin.city.City
+import fr.iscpif.coin.tool.Parse_calib
 import java.io.File
 import java.util.Random
 import scala.annotation.tailrec
 import scala.io.Source
-import fr.iscpif.coin.tool.Parse
+import fr.iscpif.coin.tool.Parse_calib
 
 object Simulation_calib extends App {
 
@@ -54,7 +55,7 @@ object Simulation_calib extends App {
   
   val rng = new Random(0)
 
-  for(mobilRate1 <- param.mobilRates par; mobilRate2 <- param.mobilRates par; repli <- 0 until 100 par)
+  for(mobilRate1 <- param.mobilRate1 par; mobilRate2 <- param.mobilRate2 par; repli <- 0 until 100 par)
       compute(repli,mobilRate1,mobilRate2)
   
   def compute(repli : Int,
