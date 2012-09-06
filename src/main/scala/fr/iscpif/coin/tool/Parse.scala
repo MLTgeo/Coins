@@ -24,10 +24,10 @@ object Parse {
       opt("r", "results", "Dir for outputs") {
         (v: String, c: Config) ⇒ c.copy(resultDir = Some(v))
       },
-      opt("m", "mobilRate1", "Mobile rate interval for city a in format min, max, step") {
+      opt("m", "mobilrates", "Mobile rate interval for city a in format min, max, step") {
         (v: String, c: Config) ⇒ c.copy(mobilRates = Some(v))
       },
-      opt("p", "mobilRate2", "Population interval for city b in format min, max, step") {
+      opt("p", "populations", "Population interval for city b in format min, max, step") {
         (v: String, c: Config) ⇒ c.copy(populations = Some(v))
       }
     )
