@@ -60,7 +60,7 @@ object Simulation_calib extends App {
               mobilRate1 : Double,
               mobilRate2 : Double) = model.generateEchanges(repli, 
                                                     Array(mobilRate1, mobilRate2), 
-                                                    Vector(654, 3328), 
+                                                    Vector(654, 2674), 
                                                     cities, 
                                                     new File(param.results, "result" + mobilRate1 + "_" + mobilRate2 + "_"+ repli + ".txt"), rng.nextLong)
 }
