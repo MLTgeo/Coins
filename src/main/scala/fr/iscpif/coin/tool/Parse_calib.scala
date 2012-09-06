@@ -8,7 +8,7 @@ package fr.iscpif.coin.tool
 import scopt.immutable.OptionParser
 import java.io.File
 
-object Parse {
+object Parse_calib {
   
   case class Config(
     towns: Option[String] = None,
