@@ -49,7 +49,7 @@ object Simulation_calib extends App {
         case 0 => gaussian(1, 1, rng)
         case 1 => gaussian(1, 1, rng)
       }
-      override val steps = 2000
+      override val steps = 5000
     }
     
   
