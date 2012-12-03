@@ -11,10 +11,12 @@ class DiscreteWallet(val coins: Array[Array[Int]]) {
   def update(value: Int, cityId: Int, nb: Int) = coins(value)(cityId) = nb
 
   def apply(value: Int): Array[Int] = coins(value)
-      
+
   def byValue = coins.zipWithIndex.map { case (coins, value) => (value, coins.sum) }
-    
-  def +=(wallet: DiscreteWallet) = 
-    for((coinsForCities, i) <- wallet.coins.zipWithIndex ; 
-        (value, j) <- coinsForCities.zipWithIndex) this(i, j) += value
+
+  def +=(wallet: DiscreteWallet) =
+    for (
+      (coinsForCities, i) <- wallet.coins.zipWithIndex;
+      (value, j) <- coinsForCities.zipWithIndex
+    ) this(i, j) += value
 }

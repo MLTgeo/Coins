@@ -5,4 +5,4 @@
 
 package fr.iscpif.coin.city
 
-class City(val id: Int, val country: Int, val rank: Int)  
+class City(val id: Int, val country: Int, val rank: Int)

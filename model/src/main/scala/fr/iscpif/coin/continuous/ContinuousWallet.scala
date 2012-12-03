@@ -11,10 +11,12 @@ class ContinuousWallet(val coins: Array[Array[Double]]) {
   def update(value: Int, cityId: Int, nb: Double) = coins(value)(cityId) = nb
 
   def apply(value: Int): Array[Double] = coins(value)
-      
+
   def byValue = coins.zipWithIndex.map { case (coins, value) => (value, coins.sum) }
-    
-  def +=(wallet: ContinuousWallet) = 
-    for((coinsForCities, i) <- wallet.coins.zipWithIndex ; 
-        (value, j) <- coinsForCities.zipWithIndex) this(i, j) += value
+
+  def +=(wallet: ContinuousWallet) =
+    for (
+      (coinsForCities, i) <- wallet.coins.zipWithIndex;
+      (value, j) <- coinsForCities.zipWithIndex
+    ) this(i, j) += value
 }

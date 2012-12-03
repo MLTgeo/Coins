@@ -3,14 +3,16 @@
  * and open the template in the editor.
  */
 
-package fr.iscpif.coin.CoinLinearGeography
+package fr.iscpif.coin.circular
 
-class ContinuousWallet(val coins: Array[Double]) {
+class Wallet(val coins: Array[Double]) {
 
   def apply(cityId: Int): Double = coins(cityId)
   def update(cityId: Int, nb: Double) = coins(cityId) = nb
 
-  def +=(wallet: ContinuousWallet) =
+  def +=(wallet: Wallet) =
     wallet.coins.zipWithIndex.foreach { case (c, i) => coins(i) += c }
+
+  def total = coins.sum
 
 }

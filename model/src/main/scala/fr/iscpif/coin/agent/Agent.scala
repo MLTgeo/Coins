@@ -9,7 +9,7 @@ import fr.iscpif.coin.city.City
 
 trait Agent {
   type W
-  
+
   def city: City
   def wallet: W
 }
