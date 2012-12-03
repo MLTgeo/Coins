@@ -34,8 +34,8 @@ trait ModelContinuous {
   
   val steps = 200
   
-  def population(city: City) = (if (city==1) POP1 else POP2).toInt
-  def defmobilRate(city: City)= if (city==1) mobilRate1 else mobilRate2 
+  def population(city: City) = (if (city.id == 1) POP1 else POP2).toInt
+  def defmobilRate(city: City)= if (city.id == 1) mobilRate1 else mobilRate2
     
   def generateEchanges(expe: Int, mobilRate: Double, POP: Int, cities: Array[City], file: String,  seed: Long) = {
     val rng = new RandomAdaptor(new Well44497a(seed))
