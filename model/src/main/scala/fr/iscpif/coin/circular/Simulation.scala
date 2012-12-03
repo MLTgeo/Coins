@@ -24,7 +24,6 @@ import scala.io.Source
 import fr.iscpif.coin.tool.Parse
 
 object Simulation extends App {
-
   //  val city1 = new City(0, 0, 100, math.cos(0), math.sin(0))
   //  val city2 = new City(1, 1, 100, math.cos(2.0 / 3 * math.Pi), math.sin(2.0 / 3 * math.Pi))
   //  val city3 = new City(2, 2, 100, math.cos(4.0 / 3 * math.Pi), math.sin(4.0 / 3 * math.Pi))
