@@ -34,7 +34,7 @@ object Simulation extends App {
   val city2 = new City(1, 1, 100, 1, 2)
   val city3 = new City(2, 2, 1000, 1, 3)
 
-/* // val param = Parse(args)
+  /* // val param = Parse(args)
 
  param.results.mkdirs
 
