@@ -2,10 +2,10 @@ name := "coin"
 
 version := "1.0-SNAPSHOT"
 
-scalaVersion := "2.10.0-RC2"
+scalaVersion := "2.10.0-RC5"
 
 //commentaire
-mainClass in (Compile, run) := Some("fr.iscpif.coin.continuous3.Simulation")
+mainClass in (Compile, run) := Some("fr.iscpif.coin.circular.Simulation")
 
 libraryDependencies += "com.github.scopt" % "scopt_2.10.0-RC2" % "2.1.0"
 
