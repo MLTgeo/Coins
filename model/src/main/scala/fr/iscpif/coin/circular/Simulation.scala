@@ -52,7 +52,7 @@ object Simulation extends App {
 
   //val cities = List(city1, city2, city3)
 
-  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 100 par)
+  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 10 par)
     compute(distanceDecay, populationWeight, mobilRate, repli)
 
   def compute(
@@ -69,7 +69,7 @@ object Simulation extends App {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
-      def steps = 1000
+      def steps = 100
       def endOfStep(s: Int, agents: Iterable[Agent]) =
         agents.groupBy(_.city.id).map {
           case (c, a) =>
