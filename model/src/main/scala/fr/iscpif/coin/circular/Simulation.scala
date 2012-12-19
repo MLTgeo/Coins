@@ -75,12 +75,12 @@ object Simulation extends App {
   def compute(repli: Int,
               distanceDecay: Double,
               populationWeigth: Double,
-              mobilRate: Double) = model.generateEchanges(repli,
+              mobilRate: Double) = model.run(repli,
     Vector(distanceDecay, distanceDecay),
     Vector(populationWeigth, populationWeigth),
     Vector(mobilRate, mobilRate),
     cities,
-    new File(param.results, "result" + distanceDecay + "_" + populationWeigth + "_" + mobilRate + "_" + repli + ".txt"), rng.nextLong)*/
+    new File(param.results, "result" + distanceDecay + "_" + populationWeigth + "_" + mobilRate + "_" + repli + ".txt"), rng.nextLong)
 
   val rng = new Random(0)
   model.run(cities)(rng)
