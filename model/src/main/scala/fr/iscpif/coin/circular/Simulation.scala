@@ -35,7 +35,7 @@ object Simulation extends App {
   //val city2 = new City(1, 1, 100, 1, 2)
   //val city3 = new City(2, 2, 1000, 1, 3)
 
-  val param = Parse(args)
+  val param = Parse3cities(args)
 
   param.results.mkdirs
 
@@ -50,7 +50,7 @@ object Simulation extends App {
       val population = line(2).toInt
       val x = line(3).toDouble
       val y = line(4).toDouble
-      new City(idCity, country, population, x, y)
+      new City(id, country, population, x, y)
   }.toIndexedSeq
 
   //val cities = List(city1, city2, city3)
