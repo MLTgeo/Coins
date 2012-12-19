@@ -24,19 +24,20 @@ import scala.io.Source
 import fr.iscpif.coin.tool.Parse
 import fr.iscpif.coin.city.City
 import fr.iscpif.coin.circular.City
+import fr.iscpif.coin.continuous3.ModelContinuous
 
 object Simulation extends App {
-  //  val city1 = new City(0, 0, 100, math.cos(0), math.sin(0))
-  //  val city2 = new City(1, 1, 100, math.cos(2.0 / 3 * math.Pi), math.sin(2.0 / 3 * math.Pi))
-  //  val city3 = new City(2, 2, 100, math.cos(4.0 / 3 * math.Pi), math.sin(4.0 / 3 * math.Pi))
+  //val city1 = new City(0, 0, 1000, math.cos(0), math.sin(0))
+  //val city2 = new City(1, 1, 1000, math.cos(2.0 / 3 * math.Pi), math.sin(2.0 / 3 * math.Pi))
+  //val city3 = new City(2, 2, 100, math.cos(4.0 / 3 * math.Pi), math.sin(4.0 / 3 * math.Pi))
 
-  val city1 = new City(0, 0, 1000, 1, 1)
-  val city2 = new City(1, 1, 100, 1, 2)
-  val city3 = new City(2, 2, 1000, 1, 3)
+  //val city1 = new City(0, 0, 1000, 1, 1)
+  //val city2 = new City(1, 1, 100, 1, 2)
+  //val city3 = new City(2, 2, 1000, 1, 3)
 
-  /* // val param = Parse(args)
+  val param = Parse(args)
 
- param.results.mkdirs
+  param.results.mkdirs
 
   val townMatrix =
     Source.fromFile(param.towns).getLines.drop(1).filterNot(_.matches(" *")).map {
@@ -44,22 +45,22 @@ object Simulation extends App {
     }
   val cities = townMatrix.map {
     line =>
-      val idCity = line(0).toInt
-      //val x = line(1).toDouble
-      //val y = line(2).toDouble
-      val idCountry = line(3).toInt
-      val rank = line(4).toInt
-      new City(idCity, idCountry, rank)
-  }.toIndexedSeq*/
+      val id = line(0).toInt
+      val country = line(1).toInt
+      val population = line(2).toInt
+      val x = line(3).toDouble
+      val y = line(4).toDouble
+      new City(idCity, country, population, x, y)
+  }.toIndexedSeq
 
-  val cities = List(city1, city2, city3)
+  //val cities = List(city1, city2, city3)
 
   val model =
     new Model {
-      def distanceDecay: Double = 2
-      def populationWeight: Double = 1
-      def mobilRate(city: City): Double = 0.5
-      def steps = 100
+    //  def distanceDecay: Double = 2
+    //  def populationWeight: Double = 1
+    //  def mobilRate(city: City): Double = 0.5
+      def steps = 1000
       def endOfStep(s: Int, agents: Iterable[Agent]) =
         agents.groupBy(_.city.id).map {
           case (c, a) =>
@@ -68,16 +69,16 @@ object Simulation extends App {
         }
     }
 
-  /*for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 100 par)
+  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 100 par)
     compute(repli, distanceDecay, populationWeight, mobilRate)
 
   def compute(repli: Int,
               distanceDecay: Double,
               populationWeigth: Double,
               mobilRate: Double) = model.generateEchanges(repli,
-    Vector(distanceDecay, 2),
-    Vector(populationWeigth, 1),
-    Vector(mobilRate, 0.5),
+    Vector(distanceDecay, distanceDecay),
+    Vector(populationWeigth, populationWeigth),
+    Vector(mobilRate, mobilRate),
     cities,
     new File(param.results, "result" + distanceDecay + "_" + populationWeigth + "_" + mobilRate + "_" + repli + ".txt"), rng.nextLong)*/
 
