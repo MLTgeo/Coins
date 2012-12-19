@@ -67,7 +67,7 @@ object Simulation extends App {
             val coins = a.map(_.wallet.coins).transpose.map(_.sum / a.size)
             (c, coins)
         }.sortBy { case (c, _) => c }.flatMap { case (_, coins) => coins }
-        println(s"$distanceDecay,$populationWeight,${_mobilRate},$repli,$s,${citiesCoins.mkString(",")}\n")
+        out.append(s"$distanceDecay,$populationWeight,${_mobilRate},$repli,$s,${citiesCoins.mkString(",")}\n")
       }
     }
 
