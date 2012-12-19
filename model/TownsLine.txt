@@ -1,5 +1,5 @@
-IDcity	X	Y	Nation	Rank	Holiday
-0	0	4	0	1	1
-1	0	5	1	1	1
-2	0	3	2	1	1
+id	country	population	x	y
+0	0	100	0	1
+1	1	100	1	1
+2	2	1000	2	1
 

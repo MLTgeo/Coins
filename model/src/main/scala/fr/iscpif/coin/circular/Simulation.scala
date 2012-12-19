@@ -62,12 +62,12 @@ object Simulation extends App {
       def mobilRate(city: City): Double = _mobilRate
       def steps = 100
       def endOfStep(s: Int, agents: Iterable[Agent]) = {
-       val citiesCoins = agents.groupBy(_.city.id).toList.map {
+        val citiesCoins = agents.groupBy(_.city.id).toList.map {
           case (c, a) =>
             val coins = a.map(_.wallet.coins).transpose.map(_.sum / a.size)
             (c, coins)
-        }.sortBy{case(c, _) => c}.flatMap{case(_, coins) => coins}
-        out.append(s"$distanceDecay,$populationWeight,${_mobilRate},$repli,$s,${citiesCoins.mkString(",")}\n")
+        }.sortBy { case (c, _) => c }.flatMap { case (_, coins) => coins }
+        print(s"$distanceDecay,$populationWeight,${_mobilRate},$repli,$s,${citiesCoins.mkString(",")}\n")
       }
     }
 
