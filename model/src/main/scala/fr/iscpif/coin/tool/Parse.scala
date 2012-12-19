@@ -13,8 +13,9 @@ object Parse {
   case class Config(
     towns: Option[String] = None,
     resultDir: Option[String] = None,
-    mobilRates: Option[String] = None,
-    populations: Option[String] = None)
+    distanceDecay: Option[String] = None,
+    populationWeight: Option[String] = None,
+    mobilRate: Option[String] = None)
 
   val parser = new OptionParser[Config]("towns", "0.x") {
     def options = Seq(
@@ -24,11 +25,14 @@ object Parse {
       opt("r", "results", "Dir for outputs") {
         (v: String, c: Config) ⇒ c.copy(resultDir = Some(v))
       },
-      opt("m", "mobilrates", "Mobile rate interval for city a in format min, max, step") {
-        (v: String, c: Config) ⇒ c.copy(mobilRates = Some(v))
+      opt("d", "distanceDecay", "Distance decay parameter interval in format min, max, step") {
+        (v: String, c: Config) ⇒ c.copy(distanceDecay = Some(v))
       },
-      opt("p", "populations", "Population interval for city b in format min, max, step") {
-        (v: String, c: Config) ⇒ c.copy(populations = Some(v))
+      opt("p", "populationWeight", "Population weight parameter interval in format min, max, step") {
+        (v: String, c: Config) ⇒ c.copy(populationWeight = Some(v))
+      },
+      opt("m", "mobilRate", "mobility rate interval in format min, max, step") {
+        (v: String, c: Config) ⇒ c.copy(mobilRate = Some(v))
       }
     )
   }
@@ -41,13 +45,17 @@ object Parse {
         new {
           val towns = new File(c.towns.getOrElse(error("Towns not defined")))
           val results = new File(c.resultDir.getOrElse(error("Results not defined")))
-          val mobilRates = {
-            val i = parseInterval(c.mobilRates.getOrElse(error("Mobile rate interval not defined")))
+          val distanceDecay = {
+            val i = parseInterval(c.distanceDecay.getOrElse(error("Distance decay interval not defined")))
             i(0).toDouble to i(1).toDouble by i(2).toDouble
           }
-          val populations = {
-            val i = parseInterval(c.populations.getOrElse(error("Mobile rate interval not defined")))
-            i(0).toInt to i(1).toInt by i(2).toInt
+          val populationWeight = {
+            val i = parseInterval(c.populationWeight.getOrElse(error("Population weight interval not defined")))
+            i(0).toDouble to i(1).toDouble by i(2).toDouble
+          }
+          val mobilRate = {
+            val i = parseInterval(c.mobilRate.getOrElse(error("Mobility rate interval not defined")))
+            i(0).toDouble to i(1).toDouble by i(2).toDouble
           }
 
         }

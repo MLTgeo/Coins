@@ -17,14 +17,11 @@
 
 package fr.iscpif.coin.circular
 
-import java.io.File
+import java.io._
 import java.util.Random
-import scala.annotation.tailrec
 import scala.io.Source
 import fr.iscpif.coin.tool.Parse
-import fr.iscpif.coin.city.City
-import fr.iscpif.coin.circular.City
-import fr.iscpif.coin.continuous3.ModelContinuous
+import org.apache.commons.math3.random.{ RandomAdaptor, Well44497b }
 
 object Simulation extends App {
   //val city1 = new City(0, 0, 1000, math.cos(0), math.sin(0))
@@ -35,7 +32,7 @@ object Simulation extends App {
   //val city2 = new City(1, 1, 100, 1, 2)
   //val city3 = new City(2, 2, 1000, 1, 3)
 
-  val param = Parse3cities(args)
+  val param = Parse(args)
 
   param.results.mkdirs
 
@@ -55,35 +52,35 @@ object Simulation extends App {
 
   //val cities = List(city1, city2, city3)
 
-  val model =
-    new Model {
-    //  def distanceDecay: Double = 2
-    //  def populationWeight: Double = 1
-    //  def mobilRate(city: City): Double = 0.5
+  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 100 par)
+    compute(distanceDecay, populationWeight, mobilRate, repli)
+
+  def compute(
+    _distanceDecay: Double,
+    _populationWeight: Double,
+    _mobilRate: Double,
+    repli: Int) = {
+    val rng = new RandomAdaptor(new Well44497b(repli))
+
+    val file = new File(param.results, "result" + _distanceDecay + "_" + _populationWeight + "_" + _mobilRate + "_" + repli + ".txt")
+    val out = new BufferedWriter((new FileWriter(file)))
+
+    val model = new Model {
+      def distanceDecay: Double = _distanceDecay
+      def populationWeight: Double = _populationWeight
+      def mobilRate(city: City): Double = _mobilRate
       def steps = 1000
       def endOfStep(s: Int, agents: Iterable[Agent]) =
         agents.groupBy(_.city.id).map {
           case (c, a) =>
             val coins = a.map(_.wallet.coins).transpose.map(_.sum / a.size)
-            println(s"$s,${c},${coins.mkString(",")}")
+            out.append(s"$s,${c},${coins.mkString(",")}" + "\n")
         }
     }
 
-  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 100 par)
-    compute(repli, distanceDecay, populationWeight, mobilRate)
-
-  def compute(repli: Int,
-              distanceDecay: Double,
-              populationWeigth: Double,
-              mobilRate: Double) = model.run(repli,
-    Vector(distanceDecay, distanceDecay),
-    Vector(populationWeigth, populationWeigth),
-    Vector(mobilRate, mobilRate),
-    cities,
-    new File(param.results, "result" + distanceDecay + "_" + populationWeigth + "_" + mobilRate + "_" + repli + ".txt"), rng.nextLong)
-
-  val rng = new Random(0)
-  model.run(cities)(rng)
+    try model.run(cities)(rng)
+    finally out.close
+  }
 
 }
 
