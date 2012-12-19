@@ -61,12 +61,14 @@ object Simulation extends App {
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
       def steps = 100
-      def endOfStep(s: Int, agents: Iterable[Agent]) =
-        agents.groupBy(_.city.id).map {
+      def endOfStep(s: Int, agents: Iterable[Agent]) = {
+       val citiesCoins = agents.groupBy(_.city.id).map {
           case (c, a) =>
             val coins = a.map(_.wallet.coins).transpose.map(_.sum / a.size)
-            out.append(s"$s,${c},${coins.mkString(",")}" + "\n")
-        }
+            (c, coins)
+        }.toList.sortBy{case(c, _) => c}.flatMap{case(_, coins) => coins}
+        out.append(s"$s,${citiesCoins.mkString(",")}")
+      }
     }
 
     try model.run(cities)(rng)
