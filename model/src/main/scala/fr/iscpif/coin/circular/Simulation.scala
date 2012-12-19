@@ -24,13 +24,6 @@ import fr.iscpif.coin.tool.Parse
 import org.apache.commons.math3.random.{ RandomAdaptor, Well44497b }
 
 object Simulation extends App {
-  //val city1 = new City(0, 0, 1000, math.cos(0), math.sin(0))
-  //val city2 = new City(1, 1, 1000, math.cos(2.0 / 3 * math.Pi), math.sin(2.0 / 3 * math.Pi))
-  //val city3 = new City(2, 2, 100, math.cos(4.0 / 3 * math.Pi), math.sin(4.0 / 3 * math.Pi))
-
-  //val city1 = new City(0, 0, 1000, 1, 1)
-  //val city2 = new City(1, 1, 100, 1, 2)
-  //val city3 = new City(2, 2, 1000, 1, 3)
 
   val param = Parse(args)
 
@@ -49,8 +42,6 @@ object Simulation extends App {
       val y = line(4).toDouble
       new City(id, country, population, x, y)
   }.toIndexedSeq
-
-  //val cities = List(city1, city2, city3)
 
   for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 10 par)
     compute(distanceDecay, populationWeight, mobilRate, repli)
