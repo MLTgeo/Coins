@@ -43,7 +43,7 @@ object Simulation extends App {
       new City(id, country, population, x, y)
   }.toIndexedSeq
 
-  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 10 par)
+  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 100 par)
     compute(distanceDecay, populationWeight, mobilRate, repli)
 
   def compute(
