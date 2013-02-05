@@ -60,7 +60,7 @@ object Simulation extends App {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
-      def steps = 100
+      def steps = 250
       def endOfStep(s: Int, agents: Iterable[Agent]) = {
         val citiesCoins = agents.groupBy(_.city.id).toList.map {
           case (c, a) =>
