@@ -62,7 +62,7 @@ object Simulation extends App {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
-      def steps = 500
+      def steps = 250
       override def touristRate: Double = 0.67
       override def isHolidays(s: Int) = (s % 12) < 1
 
