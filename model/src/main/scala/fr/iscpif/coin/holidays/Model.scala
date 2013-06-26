@@ -17,8 +17,7 @@
 
 package fr.iscpif.coin.holidays
 
-import java.util.Random
-import util.Random._
+import util.Random
 
 trait Model {
 

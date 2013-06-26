@@ -18,11 +18,11 @@
 package fr.iscpif.coin.holidays
 
 import java.io._
-import java.util.Random
 import scala.io.Source
 import fr.iscpif.coin.tool.Parse
 import org.apache.commons.math3.random.{ RandomAdaptor, Well44497b }
 import fr.iscpif.coin.tool.Converter._
+import scalax.io.Resource
 
 object Simulation extends App {
 
@@ -45,24 +45,31 @@ object Simulation extends App {
       new City(id, country, population, x, y, touristic)
   }.toIndexedSeq
 
-  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 100 par)
-    compute(distanceDecay, populationWeight, mobilRate, repli)
+  for {
+    distanceDecay <- param.distanceDecay.par
+    populationWeight <- param.populationWeight.par
+    mobilRate <- param.mobilRate.par
+    repli <- 0 until 100 par
+  } compute(distanceDecay, populationWeight, mobilRate, repli)
 
   def compute(
     _distanceDecay: Double,
     _populationWeight: Double,
     _mobilRate: Double,
     repli: Int) = {
+
     val rng = new RandomAdaptor(new Well44497b(repli))
 
     val file = new File(param.results, "result" + _distanceDecay + "_" + _populationWeight + "_" + _mobilRate + "_" + repli + ".txt")
-    val out = new BufferedWriter((new FileWriter(file)))
+    file.delete
+
+    val out = Resource.fromFile(file)
 
     val model = new Model {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
-      def steps = 500
+      def steps = 10
       override def touristRate: Double = 0.67
       override def isHolidays(s: Int) = (s % 12) < 1
 
@@ -72,12 +79,13 @@ object Simulation extends App {
             val coins = a.map(_.wallet.coins).transpose.map(_.sum / a.size)
             (c, coins)
         }.sortBy { case (c, _) => c }.flatMap { case (_, coins) => coins }
-        out.append(s"$distanceDecay,$populationWeight,${_mobilRate},$repli,$s,${citiesCoins.mkString(",")}\n")
+
+        val write = param.samples.map(_.contains(s)).getOrElse(true)
+        if (write) out.append(s"$distanceDecay,$populationWeight,${_mobilRate},$repli,$s,${citiesCoins.mkString(",")}\n")
       }
     }
 
-    try model.run(cities)(rng)
-    finally out.close
+    model.run(cities)(rng)
   }
 
 }

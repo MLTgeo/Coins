@@ -7,6 +7,7 @@ package fr.iscpif.coin.tool
 
 import scopt.immutable.OptionParser
 import java.io.File
+import sys.error
 
 object Parse {
 
@@ -15,7 +16,8 @@ object Parse {
     resultDir: Option[String] = None,
     distanceDecay: Option[String] = None,
     populationWeight: Option[String] = None,
-    mobilRate: Option[String] = None)
+    mobilRate: Option[String] = None,
+    samples: Option[Set[Int]] = None)
 
   val parser = new OptionParser[Config]("towns", "0.x") {
     def options = Seq(
@@ -33,11 +35,17 @@ object Parse {
       },
       opt("m", "mobilRate", "mobility rate interval in format min, max, step") {
         (v: String, c: Config) ⇒ c.copy(mobilRate = Some(v))
+      },
+      opt("s", "samples", "Sample times") {
+        (v: String, c: Config) => c.copy(samples = Some(v.split(",").map(_.toInt).toSet))
       }
     )
   }
 
-  def parseInterval(s: String) = s.split(",")
+  def parseInterval(s: String) = {
+    val i = s.split(",")
+    i(0).toDouble to i(1).toDouble by i(2).toDouble
+  }
 
   def apply(args: Array[String]) =
     parser.parse(args, Config()) map {
@@ -45,19 +53,10 @@ object Parse {
         new {
           val towns = new File(c.towns.getOrElse(error("Towns not defined")))
           val results = new File(c.resultDir.getOrElse(error("Results not defined")))
-          val distanceDecay = {
-            val i = parseInterval(c.distanceDecay.getOrElse(error("Distance decay interval not defined")))
-            i(0).toDouble to i(1).toDouble by i(2).toDouble
-          }
-          val populationWeight = {
-            val i = parseInterval(c.populationWeight.getOrElse(error("Population weight interval not defined")))
-            i(0).toDouble to i(1).toDouble by i(2).toDouble
-          }
-          val mobilRate = {
-            val i = parseInterval(c.mobilRate.getOrElse(error("Mobility rate interval not defined")))
-            i(0).toDouble to i(1).toDouble by i(2).toDouble
-          }
-
+          val distanceDecay = parseInterval(c.distanceDecay.getOrElse(error("Distance decay interval not defined")))
+          val populationWeight = parseInterval(c.populationWeight.getOrElse(error("Population weight interval not defined")))
+          val mobilRate = parseInterval(c.mobilRate.getOrElse(error("Mobility rate interval not defined")))
+          val samples = c.samples
         }
     } match {
       case None => error("Unable to parse command line " + args.mkString(" "))
