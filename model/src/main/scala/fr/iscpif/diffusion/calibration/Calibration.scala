@@ -98,7 +98,7 @@ object Calibration extends App {
 
     def apply(x: Seq[Double], rng: Random) = {
       val fit =
-        seeds.map {
+        seeds.par.map {
           seed =>
             compute(x(0), x(1), x(2), x(3), x(4), seed).take(121).zipWithIndex.map {
               case (state, step) => evaluate(state, step)
@@ -122,7 +122,13 @@ object Calibration extends App {
   }.toList  */
 
   implicit val rng = new Random(42)
-  val res = problem.evolve.untilConverged(s => println(s.generation)).individuals
-  res.foreach { i => println("genome = " + problem.scale(i.genome) + " fitness = " + i.fitness) }
+  val res = problem.evolve.untilConverged{
+    s =>
+      println(s.generation)
+      display(s.individuals)
+  }.individuals
+
+  def display(res: Seq[Individual[problem.G,_,_]]) =
+    res.foreach { i => println("genome = " + problem.scale(i.genome) + " fitness = " + i.fitness) }
 
 }
