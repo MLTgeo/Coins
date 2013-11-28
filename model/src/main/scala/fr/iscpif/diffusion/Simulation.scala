@@ -15,14 +15,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.iscpif.coin.holidays
+package fr.iscpif.diffusion
 
 import java.io._
 import scala.io.Source
-import fr.iscpif.coin.tool.Parse
+import fr.iscpif.diffusion.tool.Parse
 import org.apache.commons.math3.random.{ RandomAdaptor, Well44497b }
-import fr.iscpif.coin.tool.Converter._
+import fr.iscpif.diffusion.tool.Converter._
 import scalax.io.Resource
+import Model._
 
 object Simulation extends App {
 
@@ -42,50 +43,48 @@ object Simulation extends App {
       val x = line(3).toDouble
       val y = line(4).toDouble
       val touristic = line(5)
-      new City(id, country, population, x, y, touristic)
+      City(id, country, population, x, y, touristic)
   }.toIndexedSeq
 
   for {
     distanceDecay <- param.distanceDecay.par
     populationWeight <- param.populationWeight.par
     mobilRate <- param.mobilRate.par
-    repli <- 0 until 100 par
-  } compute(distanceDecay, populationWeight, mobilRate, repli)
+    replication <- 0 until 100 par
+  } compute(distanceDecay, populationWeight, mobilRate, replication)
 
   def compute(
-    _distanceDecay: Double,
-    _populationWeight: Double,
-    _mobilRate: Double,
-    repli: Int) = {
+    distanceDecay: Double,
+    populationWeight: Double,
+    mobilRate: Double,
+    replication: Int) = {
 
-    val rng = new RandomAdaptor(new Well44497b(repli))
+    val rng = new RandomAdaptor(new Well44497b(replication))
+    val (_distanceDecay, _populationWeight, _mobilRate) = (distanceDecay, populationWeight, mobilRate)
 
-    val file = new File(param.results, "result" + _distanceDecay + "_" + _populationWeight + "_" + _mobilRate + "_" + repli + ".txt")
-    file.delete
-
-    val out = Resource.fromFile(file)
-
-    val model = new Model {
+    val model = new Model with MoneyExchange {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
       def steps = 10
-      override def touristRate: Double = 0.67
+      def touristRate: Double = 0.67
+      def exchangeRate: Double = 0.5
       override def isHolidays(s: Int) = (s % 12) < 1
-
-      def endOfStep(s: Int, agents: Iterable[Agent]) = {
-        val citiesCoins = agents.groupBy(_.city.id).toList.map {
-          case (c, a) =>
-            val coins = a.map(_.wallet.coins).transpose.map(_.sum / a.size)
-            (c, coins)
-        }.sortBy { case (c, _) => c }.flatMap { case (_, coins) => coins }
-
-        val write = param.samples.map(_.contains(s)).getOrElse(true)
-        if (write) out.append(s"$distanceDecay,$populationWeight,${_mobilRate},$repli,$s,${citiesCoins.mkString(",")}\n")
-      }
     }
 
-    model.run(cities)(rng)
+    val file = new File(param.results, "result" + distanceDecay + "_" + populationWeight + "_" + mobilRate + "_" + replication + ".txt")
+    file.delete
+
+    val out = Resource.fromFile(file)
+    def saveState(s: Int, agents: Seq[Agent]) = {
+      val citiesCoins = agentsToCityWallets(agents, cities).flatten
+      val write = param.samples.map(_.contains(s)).getOrElse(true)
+      if (write) out.append(s"$distanceDecay,$populationWeight,$mobilRate,$replication,$s,${citiesCoins.mkString(",")}\n")
+    }
+
+    for {
+      (s, i) <- model.run(cities)(rng).zipWithIndex
+    } saveState(i, s)
   }
 
 }

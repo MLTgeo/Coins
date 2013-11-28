@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package fr.iscpif.coin.tool
+package fr.iscpif.diffusion.tool
 
 import scopt.immutable.OptionParser
 import java.io.File

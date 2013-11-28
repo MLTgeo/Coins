@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 Romain Reuillon, Marion Le Texier
+ * Copyright (C) 26/06/13 Romain Reuillon
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -9,22 +9,25 @@
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.iscpif.coin.circular
+package fr.iscpif.diffusion.calibration
 
-import java.io._
-import java.util.Random
+import fr.iscpif.diffusion.tool.Parse
 import scala.io.Source
-import fr.iscpif.coin.tool.Parse
-import org.apache.commons.math3.random.{ RandomAdaptor, Well44497b }
+import org.apache.commons.math3.random.{ Well44497b, RandomAdaptor }
+import java.io.File
+import scalax.io.Resource
+import fr.iscpif.diffusion.{ City, Agent, Model }
+import Model._
+import fr.iscpif.diffusion._
+import fr.iscpif.diffusion.tool.Converter._
 
-object Simulation extends App {
-
+object Calibration extends App {
   val param = Parse(args)
 
   param.results.mkdirs
@@ -40,40 +43,49 @@ object Simulation extends App {
       val population = line(2).toInt
       val x = line(3).toDouble
       val y = line(4).toDouble
-      new City(id, country, population, x, y)
+      val touristic = line(5)
+      new City(id, country, population, x, y, touristic)
   }.toIndexedSeq
 
-  for (distanceDecay <- param.distanceDecay par; populationWeight <- param.populationWeight par; mobilRate <- param.mobilRate par; repli <- 0 until 100 par)
-    compute(distanceDecay, populationWeight, mobilRate, repli)
+  val meanDistanceToCountry = Fitness.distanceToForeignCountry(cities)
+
+  for {
+    distanceDecay <- param.distanceDecay.par
+    populationWeight <- param.populationWeight.par
+    mobilRate <- param.mobilRate.par
+    repli <- 0 until 1 par
+  } compute(distanceDecay, populationWeight, mobilRate, repli)
 
   def compute(
     _distanceDecay: Double,
     _populationWeight: Double,
     _mobilRate: Double,
     repli: Int) = {
+
     val rng = new RandomAdaptor(new Well44497b(repli))
 
     val file = new File(param.results, "result" + _distanceDecay + "_" + _populationWeight + "_" + _mobilRate + "_" + repli + ".txt")
-    val out = new BufferedWriter((new FileWriter(file)))
+    file.delete
 
-    val model = new Model {
+    val out = Resource.fromFile(file)
+
+    val model = new Model with MoneyExchange {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
-      def steps = 250
-      def endOfStep(s: Int, agents: Iterable[Agent]) = {
-        val citiesCoins = agents.groupBy(_.city.id).toList.map {
-          case (c, a) =>
-            val coins = a.map(_.wallet.coins).transpose.map(_.sum / a.size)
-            (c, coins)
-        }.sortBy { case (c, _) => c }.flatMap { case (_, coins) => coins }
-        out.append(s"$distanceDecay,$populationWeight,${_mobilRate},$repli,$s,${citiesCoins.mkString(",")}\n")
+      def steps = 100
+      def exchangeRate = 0.5
+      def touristRate: Double = 0.67
+      override def isHolidays(s: Int) = (s % 12) < 1
+
+      def endOfStep(s: Int, agents: Seq[Agent]) = {
+        val cityWallets = agentsToCityWallets(agents, cities)
+        val write = param.samples.map(_.contains(s)).getOrElse(true)
+        if (write) println(Fitness.spatialExtent(cities, cityWallets, meanDistanceToCountry))
       }
     }
 
-    try model.run(cities)(rng)
-    finally out.close
+    model.run(cities)(rng)
   }
 
 }
-

@@ -15,6 +15,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.iscpif.coin.circular
+package fr.iscpif.diffusion
 
-case class City(val id: Int, val country: Int, val population: Int, val x: Double, val y: Double)
+/**
+ * Individual moving and exchanging coins.
+ *
+ * @param city City of residence.
+ * @param destination City of work. Might be equal to source in case of a static agent.
+ * @param holidaysDestination City of holidays.
+ * @param wallet Wallet containing the diffusion proportions for each country.
+ */
+case class Agent(
+    city: City,
+    destination: City,
+    holidaysDestination: City,
+    wallet: Wallet) {
+  def copy = Agent(city, destination, holidaysDestination, wallet.copy)
+}

@@ -15,6 +15,22 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.iscpif.coin.circular
+package fr.iscpif.diffusion
 
-class Agent(val city: City, val destination: City, val wallet: Wallet)
+/**
+ * A source is a place gathering agents. It might be their place of residence or a destination.
+ *
+ * @param id Identity of the source from 0 to n. Numbered according to the line in the input file.
+ * @param country Belonging country for this source.
+ * @param population Total number of agent residing in the source.
+ * @param x Longitude of the source.
+ * @param y Latitude of the source.
+ * @param touristic True if the source is a holiday destination.
+ */
+case class City(
+  id: Int,
+  country: Int,
+  population: Int,
+  x: Double,
+  y: Double,
+  touristic: Boolean = false)
