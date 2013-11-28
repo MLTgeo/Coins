@@ -66,7 +66,6 @@ object Simulation extends App {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
-      def steps = 10
       def touristRate: Double = 0.67
       def exchangeRate: Double = 0.5
       override def isHolidays(s: Int) = (s % 12) < 1
@@ -83,7 +82,7 @@ object Simulation extends App {
     }
 
     for {
-      (s, i) <- model.run(cities)(rng).zipWithIndex
+      (s, i) <- model.states(cities)(rng).take(100).zipWithIndex
     } saveState(i, s)
   }
 

@@ -51,12 +51,12 @@ object Parse {
     parser.parse(args, Config()) map {
       c =>
         new {
-          val towns = new File(c.towns.getOrElse(error("Towns not defined")))
-          val results = new File(c.resultDir.getOrElse(error("Results not defined")))
-          val distanceDecay = parseInterval(c.distanceDecay.getOrElse(error("Distance decay interval not defined")))
-          val populationWeight = parseInterval(c.populationWeight.getOrElse(error("Population weight interval not defined")))
-          val mobilRate = parseInterval(c.mobilRate.getOrElse(error("Mobility rate interval not defined")))
-          val samples = c.samples
+          lazy val towns = new File(c.towns.getOrElse(error("Towns not defined")))
+          lazy val results = new File(c.resultDir.getOrElse(error("Results not defined")))
+          lazy val distanceDecay = parseInterval(c.distanceDecay.getOrElse(error("Distance decay interval not defined")))
+          lazy val populationWeight = parseInterval(c.populationWeight.getOrElse(error("Population weight interval not defined")))
+          lazy val mobilRate = parseInterval(c.mobilRate.getOrElse(error("Mobility rate interval not defined")))
+          lazy val samples = c.samples
         }
     } match {
       case None => error("Unable to parse command line " + args.mkString(" "))

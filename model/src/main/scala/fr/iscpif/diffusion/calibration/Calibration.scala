@@ -17,25 +17,21 @@
 
 package fr.iscpif.diffusion.calibration
 
-import fr.iscpif.diffusion.tool.Parse
 import scala.io.Source
 import org.apache.commons.math3.random.{ Well44497b, RandomAdaptor }
-import java.io.File
-import scalax.io.Resource
-import fr.iscpif.diffusion.{ City, Agent, Model }
-import Model._
-import fr.iscpif.diffusion._
 import fr.iscpif.diffusion.tool.Converter._
+import fr.iscpif.mgo._
+import scala.util.Random
+import fr.iscpif.diffusion._
 
 object Calibration extends App {
-  val param = Parse(args)
-
-  param.results.mkdirs
+  //val param = Parse(args)
 
   val townMatrix =
-    Source.fromFile(param.towns).getLines.drop(1).filterNot(_.matches(" *")).map {
+    Source.fromFile("Inputs.txt").getLines.drop(1).filterNot(_.matches(" *")).map {
       l => l.split("\t").toArray
     }
+
   val cities = townMatrix.map {
     line =>
       val id = line(0).toInt
@@ -44,48 +40,89 @@ object Calibration extends App {
       val x = line(3).toDouble
       val y = line(4).toDouble
       val touristic = line(5)
-      new City(id, country, population, x, y, touristic)
+      City(id, country, population, x, y, touristic)
   }.toIndexedSeq
 
-  val meanDistanceToCountry = Fitness.distanceToForeignCountry(cities)
+  val nuts = Source.fromFile("empirics/NUTSID.txt").getLines.drop(1).map {
+    l =>
+      val array = l.split("\t").toSeq
+      array(0) -> array(1).trim.toInt
+  }.toMap
 
-  for {
-    distanceDecay <- param.distanceDecay.par
-    populationWeight <- param.populationWeight.par
-    mobilRate <- param.mobilRate.par
-    repli <- 0 until 1 par
-  } compute(distanceDecay, populationWeight, mobilRate, repli)
+  val empirics =
+    Source.fromFile("empirics/Empirics.csv").getLines.drop(1).map {
+      l =>
+        val array = l.split("\t").toArray
+        val id = nuts(array(0))
+        val t = array(1).toInt
+        val ep = array.drop(2).map(_.toDouble).toSeq
+        (id, t) -> ep
+    }.toMap
 
   def compute(
-    _distanceDecay: Double,
-    _populationWeight: Double,
-    _mobilRate: Double,
-    repli: Int) = {
+    distanceDecay: Double,
+    populationWeight: Double,
+    mobilRate: Double,
+    touristRate: Double,
+    exchangeRate: Double,
+    seed: Long) = {
 
-    val rng = new RandomAdaptor(new Well44497b(repli))
+    implicit val rng = new RandomAdaptor(new Well44497b(seed))
 
-    val file = new File(param.results, "result" + _distanceDecay + "_" + _populationWeight + "_" + _mobilRate + "_" + repli + ".txt")
-    file.delete
-
-    val out = Resource.fromFile(file)
+    val (_distanceDecay, _populationWeight, _mobilRate, _touristRate, _exchangeRate) = (distanceDecay, populationWeight, mobilRate, touristRate, exchangeRate)
 
     val model = new Model with MoneyExchange {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
-      def steps = 100
-      def exchangeRate = 0.5
-      def touristRate: Double = 0.67
+      def exchangeRate = _exchangeRate
+      def touristRate: Double = _touristRate
       override def isHolidays(s: Int) = (s % 12) < 1
-
-      def endOfStep(s: Int, agents: Seq[Agent]) = {
-        val cityWallets = agentsToCityWallets(agents, cities)
-        val write = param.samples.map(_.contains(s)).getOrElse(true)
-        if (write) println(Fitness.spatialExtent(cities, cityWallets, meanDistanceToCountry))
-      }
     }
 
-    model.run(cities)(rng)
+    model.states(cities)(rng)
   }
+
+  val seeder = new Random(42)
+
+  val problem = new GAProblem with NSGAII {
+    lazy val seeds = Iterator.continually(seeder.nextLong()).take(5).toSeq
+
+    def mu = 200
+    def lambda = 200
+    def genomeSize = 5
+    def steps = 100
+
+    def min = Seq(0.0, 0.0, 0.0, 0.0, 0.0)
+    def max = Seq(2.0, 1.0, 1.0, 1.0, 1.0)
+
+    def apply(x: Seq[Double], rng: Random) = {
+      val fit =
+        seeds.map {
+          seed =>
+            compute(x(0), x(1), x(2), x(3), x(4), seed).take(121).zipWithIndex.map {
+              case (state, step) => evaluate(state, step)
+            }.sum
+        }.sum
+      Vector(fit)
+    }
+
+  }
+
+  def evaluate(agents: Seq[Agent], step: Int): Double =
+    (Model.agentsToCityWallets(agents, cities) zip cities).flatMap {
+      case (wallet, city) =>
+        empirics.get(city.id -> step).map {
+          targetEP => (wallet zip targetEP).map { case (w, t) => math.pow(w - t, 2) }.sum
+        }
+    }.sum
+
+  /*compute(0.5, 0.5, 0.5, 0.5, 0.5, 40).take(121).zipWithIndex.map {
+    case (state, step) => println(step + " " + evaluate(state, step))
+  }.toList  */
+
+  implicit val rng = new Random(42)
+  val res = problem.evolve.untilConverged(s => println(s.generation)).individuals
+  res.foreach { i => println("genome = " + problem.scale(i.genome) + " fitness = " + i.fitness) }
 
 }

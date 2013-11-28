@@ -64,16 +64,13 @@ trait Model <: Exchange {
    */
   def isHolidays(s: Int) = false
 
-  /// The total number of time steps simulated by the model
-  def steps: Int
-
   /**
    * Main loop of the model
    * @param cities
    * @param rng
    * @return
    */
-  def run(cities: Seq[City])(implicit rng: Random) = {
+  def states(cities: Seq[City])(implicit rng: Random) = {
     // All countries of the model
     val countries = cities.groupBy(_.country).keys.toSeq
 
@@ -100,7 +97,7 @@ trait Model <: Exchange {
     def copyOfState = agents.map(_.copy)
 
     Iterator(copyOfState) ++
-      (0 until steps).iterator.map {
+      Iterator.iterate(0)(_ + 1).map {
         s =>
           step(s)
           copyOfState
