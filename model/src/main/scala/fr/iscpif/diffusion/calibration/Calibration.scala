@@ -23,6 +23,8 @@ import fr.iscpif.diffusion.tool.Converter._
 import fr.iscpif.mgo._
 import scala.util.Random
 import fr.iscpif.diffusion._
+import scalax.io.Resource
+import fr.iscpif.mgo.modifier.NoveltyModifier
 
 object Calibration extends App {
   //val param = Parse(args)
@@ -85,13 +87,16 @@ object Calibration extends App {
 
   val seeder = new Random(42)
 
-  val problem = new GAProblem with NSGAII {
+  val problem = new GAProblem with NoveltyModifier with NoveltyArchive with NonDominatedElitism with MG with GASigmaFactory with CounterTermination with CrowdingDiversity with GeneticBreeding with BinaryTournamentSelection with CoEvolvingSigmaValuesMutation with SBXBoundedCrossover with StrictDominance {
     lazy val seeds = Iterator.continually(seeder.nextLong()).take(5).toSeq
 
     def mu = 200
     def lambda = 200
     def genomeSize = 5
     def steps = 100
+    def archiveSize = 200
+    def isGood(individual: Individual[G, P, F]) =
+      individual.fitness.values.max < 1350
 
     def min = Seq(0.0, 0.0, 0.0, 0.0, 0.0)
     def max = Seq(2.0, 1.0, 1.0, 1.0, 1.0)
@@ -106,7 +111,6 @@ object Calibration extends App {
         }.sum
       Vector(fit)
     }
-
   }
 
   def evaluate(agents: Seq[Agent], step: Int): Double =
@@ -122,13 +126,22 @@ object Calibration extends App {
   }.toList  */
 
   implicit val rng = new Random(42)
-  val res = problem.evolve.untilConverged{
+  /*val res = problem.evolve.untilConverged{
     s =>
       println(s.generation)
       display(s.individuals)
-  }.individuals
+  }.individuals */
 
-  def display(res: Seq[Individual[problem.G,_,_]]) =
+  def display(res: Seq[Individual[problem.G, _, _]]) =
     res.foreach { i => println("genome = " + problem.scale(i.genome) + " fitness = " + i.fitness) }
+
+  problem.evolve.untilConverged {
+    s =>
+      val output = Resource.fromFile(s"/tmp/coin/archive${s.generation}.csv")
+      s.archive.foreach {
+        i => output.append(problem.scale(i.genome).mkString(",") + "," + i.fitness.values.mkString(",") + "\n")
+      }
+      println(s.individuals.map(_.fitness.values.max).min)
+  }
 
 }
