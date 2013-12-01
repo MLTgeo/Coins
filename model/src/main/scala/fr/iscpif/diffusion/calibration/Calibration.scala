@@ -25,6 +25,7 @@ import scala.util.Random
 import fr.iscpif.diffusion._
 import scalax.io.Resource
 import math._
+import scala.collection.immutable.TreeMap
 
 object Calibration extends App {
   //val param = Parse(args)
@@ -88,12 +89,12 @@ object Calibration extends App {
   val seeder = new Random(42)
 
   val problem = new GAProblem with NSGAII with CounterTermination {
-    def nbReplication = 10
+    def nbReplication = 5
 
     lazy val seeds = Iterator.continually(seeder.nextLong()).take(nbReplication).toSeq
 
-    def mu = 200
-    def lambda = 200
+    def mu = 50
+    def lambda = 50
     def genomeSize = 5
     def steps = 100
     def archiveSize = 200
@@ -109,9 +110,9 @@ object Calibration extends App {
           seed <- seeds.par
           (state, step) <- compute(x(0), x(1), x(2), x(3), x(4), seed).take(121).zipWithIndex
           e <- evaluate(state, step)
-        } yield e
+        } yield sqrt(e)
 
-      val avg =  sqrt(differences.sum) / differences.size
+      val avg = differences.sum / differences.size
       val mse = sqrt(differences.map(d => pow(avg - d, 2)).sum / differences.size)
       Vector(avg, mse)
     }
@@ -122,7 +123,7 @@ object Calibration extends App {
       (wallet, city) <- Model.agentsToCityWallets(agents, cities) zip cities
       targetEP <- empirics.get(city.id -> step).toSeq
       (w, t) <- wallet zip targetEP
-    } yield math.pow(w - t, 2)
+    } yield pow(w - t, 2)
 
   /*compute(0.5, 0.5, 0.5, 0.5, 0.5, 40).take(121).zipWithIndex.map {
     case (state, step) => println(step + " " + evaluate(state, step))
