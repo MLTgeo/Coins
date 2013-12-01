@@ -54,6 +54,6 @@ case class Wallet(coins: Array[Double]) {
   /**
    * @return an independent copy of the content of this wallet
    */
-  def copy = Wallet(coins.clone())
+  def copy = Wallet(for(e <- coins) yield e)
 
 }
