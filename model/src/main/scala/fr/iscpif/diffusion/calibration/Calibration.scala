@@ -24,7 +24,7 @@ import fr.iscpif.mgo._
 import scala.util.Random
 import fr.iscpif.diffusion._
 import scalax.io.Resource
-import fr.iscpif.mgo.modifier.NoveltyModifier
+import math._
 
 object Calibration extends App {
   //val param = Parse(args)
@@ -110,7 +110,10 @@ object Calibration extends App {
           (state, step) <- compute(x(0), x(1), x(2), x(3), x(4), seed).take(121).zipWithIndex
           e <- evaluate(state, step)
         } yield e
-      Vector(math.sqrt(differences.sum) / differences.size)
+
+      val avg =  sqrt(differences.sum) / differences.size
+      val mse = sqrt(differences.map(d => pow(avg - d, 2)).sum / differences.size)
+      Vector(avg, mse)
     }
   }
 
