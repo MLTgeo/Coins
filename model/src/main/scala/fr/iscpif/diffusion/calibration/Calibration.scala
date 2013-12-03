@@ -93,8 +93,8 @@ object Calibration extends App {
 
     lazy val seeds = Iterator.continually(seeder.nextLong()).take(nbReplication).toSeq
 
-    def mu = 50
-    def lambda = 50
+    def mu = 25
+    def lambda = 25
     def genomeSize = 5
     def steps = 100
     def archiveSize = 200
@@ -104,18 +104,22 @@ object Calibration extends App {
     def min = Seq(0.0, 0.0, 0.0, 0.0, 0.0)
     def max = Seq(2.0, 1.0, 1.0, 1.0, 1.0)
 
-    def apply(x: Seq[Double], rng: Random) = {
-      val differences =
-        for {
-          seed <- seeds.par
-          (state, step) <- compute(x(0), x(1), x(2), x(3), x(4), seed).take(121).zipWithIndex
-          e <- evaluate(state, step)
-        } yield sqrt(e)
+    def apply(x: Seq[Double], rng: Random) = fitness(x, seeds)
 
-      val avg = differences.sum / differences.size
-      val mse = sqrt(differences.map(d => pow(avg - d, 2)).sum / differences.size)
-      Vector(avg, mse)
-    }
+  }
+
+  def fitness(x: Seq[Double], seeds: Seq[Long]) = {
+    val differences =
+      for {
+        seed <- seeds.par
+        (state, step) <- compute(x(0), x(1), x(2), x(3), x(4), seed).take(121).zipWithIndex
+        e <- evaluate(state, step)
+      } yield e
+
+    val avg = differences.sum / differences.size
+    val mse = sqrt(differences.map(d => pow(avg - d, 2)).sum / differences.size)
+
+    Vector(avg, mse)
   }
 
   def evaluate(agents: Seq[Agent], step: Int): Seq[Double] =
@@ -123,7 +127,7 @@ object Calibration extends App {
       (wallet, city) <- Model.agentsToCityWallets(agents, cities) zip cities
       targetEP <- empirics.get(city.id -> step).toSeq
       (w, t) <- wallet zip targetEP
-    } yield pow(w - t, 2)
+    } yield abs(w - t)
 
   /*compute(0.5, 0.5, 0.5, 0.5, 0.5, 40).take(121).zipWithIndex.map {
     case (state, step) => println(step + " " + evaluate(state, step))
@@ -138,6 +142,19 @@ object Calibration extends App {
 
   def display(res: Seq[Individual[problem.G, _, _]]) =
     res.foreach { i => println("genome = " + problem.scale(i.genome) + " fitness = " + i.fitness) }
+
+  /*
+
+       distanceDecay: Double,
+    populationWeight: Double,
+    mobilRate: Double,
+    touristRate: Double,
+    exchangeRate: Double,
+       */
+ /* println(
+    fitness(
+      Seq(0.19, 0.18, 0.01, 0.21, 0.5), (0L until 10L).toSeq)
+  )*/
 
   /*problem.evolve.untilConverged {
     s =>
