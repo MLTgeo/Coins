@@ -14,7 +14,7 @@ libraryDependencies += "org.apache.commons" % "commons-math3" % "3.0"
 
 libraryDependencies += "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.2"
 
-libraryDependencies += "fr.iscpif" %% "mgo" % "1.67"
+libraryDependencies += "fr.iscpif" %% "mgo" % "1.69"
 
 scalariformSettings
 

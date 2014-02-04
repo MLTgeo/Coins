@@ -134,14 +134,14 @@ object Calibration extends App {
   }.toList  */
 
   implicit val rng = new Random(42)
-  val res = problem.evolve.untilConverged {
+  problem.evolve.untilConverged {
     s =>
       println(s.generation)
-      display(s.individuals)
+      val output = Resource.fromFile(s"/tmp/coin/archive${s.generation}.csv")
+      s.individuals.foreach { i => output.append(problem.scale(i.genome).value. + " fitness = " + i.fitness) }
   }.individuals
 
-  def display(res: Seq[Individual[problem.G, _, _]]) =
-    res.foreach { i => println("genome = " + problem.scale(i.genome) + " fitness = " + i.fitness) }
+
 
   /*
 
@@ -151,9 +151,9 @@ object Calibration extends App {
     touristRate: Double,
     exchangeRate: Double,
        */
- /* println(
+  /*println(
     fitness(
-      Seq(0.19, 0.18, 0.01, 0.21, 0.5), (0L until 10L).toSeq)
+      Seq(0.19, 0.18, 0.01, 0.21, 0.5), Iterator.continually(seeder.nextLong()).take(30).toSeq)
   )*/
 
   /*problem.evolve.untilConverged {
