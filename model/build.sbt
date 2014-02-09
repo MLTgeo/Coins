@@ -1,3 +1,7 @@
+
+
+import scalariform.formatter.preferences._
+
 name := "diffusion"
 
 version := "1.0-SNAPSHOT"
@@ -16,7 +20,15 @@ libraryDependencies += "com.github.scala-incubator.io" %% "scala-io-file" % "0.4
 
 libraryDependencies += "fr.iscpif" %% "mgo" % "1.70-SNAPSHOT"
 
+
+
+
 scalariformSettings
+
+ScalariformKeys.preferences := ScalariformKeys.preferences.value
+  .setPreference(AlignSingleLineCaseStatements, true)
+  .setPreference(DoubleIndentClassDeclaration, true)
+  .setPreference(PreserveDanglingCloseParenthesis, true)
 
 //scalacOptions in (Compile, doc) ++=
 //  Opts.doc.sourceUrl("https://forge.iscpif.fr/projects/coin/repository/revisions/master/show/model/src/main/scala/€{TPL_OWNER}.€{TPL_NAME}.scala")

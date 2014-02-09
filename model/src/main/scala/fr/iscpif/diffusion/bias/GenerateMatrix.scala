@@ -101,12 +101,16 @@ object GenerateMatrix extends App {
   implicit val rng = new Random(42)
 
   val p =
-    new GenerateMatrix with Evolution with MG with GAGenome with CounterTermination with NonDominatedElitism with GaussianMutation with SBXBoundedCrossover with ParetoRanking with StrictDominance with NoArchive with GeneticBreeding with BinaryTournamentSelection with TournamentOnRankAndDiversity with IndividualDiversityModifier with CrowdingDiversity {
+    new GenerateMatrix with NoveltyModifier with OptimumDiversityArchive with NonDominatedElitism with MG with GAGenome with CrowdingDiversity with GeneticBreeding with BinaryTournamentSelection with TournamentOnRankAndDiversity with GaussianMutation with SBXBoundedCrossover with StrictDominance with CounterTermination {
+      //new GenerateMatrix with Evolution with MG with GAGenome with CounterTermination with NonDominatedElitism with GaussianMutation with SBXBoundedCrossover with ParetoRanking with StrictDominance with NoArchive with GeneticBreeding with BinaryTournamentSelection with TournamentOnRankAndDiversity with IndividualDiversityModifier with CrowdingDiversity {
       //new GenerateMatrix with Evolution with MG with GAGenome with CounterTermination with NonDominatedElitism with GaussianMutation with SBXBoundedCrossover with ParetoRanking with StrictDominance with NoArchive with GeneticBreeding with BinaryTournamentSelection with TournamentOnRankAndDiversity with RankDiversityModifier with CrowdingDiversity {
 
+      def isGood(individual: Individual[G, P, F]): Boolean = individual.fitness.values.head < 10000
+
       def genomeSize = empiricalCities.size * 2
+      def archiveSize = 100
       def mu = 100
-      def steps = 10000
+      def steps = 100000
       def lambda = 100
       def sigma = 0.01
       def individualDistance(g: Seq[Individual[G, P, F]]) = perturbations(g.map(_.phenotype))
