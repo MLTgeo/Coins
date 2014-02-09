@@ -31,20 +31,7 @@ object Simulation extends App {
 
   param.results.mkdirs
 
-  val townMatrix =
-    Source.fromFile(param.towns).getLines.drop(1).filterNot(_.matches(" *")).map {
-      l => l.split("\t").toArray
-    }
-  val cities = townMatrix.map {
-    line =>
-      val id = line(0).toInt
-      val country = line(1).toInt
-      val population = line(2).toInt
-      val x = line(3).toDouble
-      val y = line(4).toDouble
-      val touristic = line(5)
-      City(id, country, population, x, y, touristic)
-  }.toIndexedSeq
+  val cities = Model.readCities(param.towns)
 
   for {
     distanceDecay <- param.distanceDecay.par

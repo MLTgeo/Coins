@@ -19,7 +19,10 @@ package fr.iscpif.diffusion
 
 import util.Random
 import math._
+import scala.io.Source
+import java.io.File
 
+import fr.iscpif.diffusion.tool.Converter._
 object Model {
 
   def agentsToCityWallets(agents: Seq[Agent], cities: Seq[City]): Seq[Seq[Double]] = {
@@ -32,6 +35,25 @@ object Model {
   }
 
   def distance(c1: City, c2: City) = math.hypot(c2.x - c1.x, c2.y - c1.y)
+
+  def readCities(towns: File) = {
+    def townMatrix =
+      Source.fromFile(towns).getLines.drop(1).filterNot(_.matches(" *")).map {
+        l => l.split("\t").toArray
+      }
+
+    townMatrix.map {
+      line =>
+        val id = line(0).toInt
+        val country = line(1).toInt
+        val population = line(2).toInt
+        val x = line(3).toDouble
+        val y = line(4).toDouble
+        val touristic = line(5)
+        City(id, country, population, x, y, touristic)
+    }.toIndexedSeq
+  }
+
 }
 
 import Model._
