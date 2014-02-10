@@ -22,7 +22,6 @@ import math._
 import scala.io.Source
 import java.io.File
 
-import fr.iscpif.diffusion.tool.Converter._
 object Model {
 
   def agentsToCityWallets(agents: Seq[Agent], cities: Seq[City]): Seq[Seq[Double]] = {
@@ -49,8 +48,7 @@ object Model {
         val population = line(2).toInt
         val x = line(3).toDouble
         val y = line(4).toDouble
-        val touristic = line(5)
-        City(id, country, population, x, y, touristic)
+        City(id, country, population, x, y)
     }.toIndexedSeq
   }
 
@@ -76,16 +74,6 @@ trait Model <: Exchange {
   /// Proportion of exchange according to the number of agents in the city.
   def exchangeRate: Double
 
-  /// Proportion of residents of a city going to holiday.
-  def touristRate: Double
-
-  /**
-   * Return true if the given time step is holiday time.
-   * @param s The time step.
-   * @return true if holiday time.
-   */
-  def isHolidays(s: Int) = false
-
   /**
    * Main loop of the model
    * @param cities
@@ -101,20 +89,14 @@ trait Model <: Exchange {
 
     val agentsBySource = agents.groupBy(_.city)
     val agentsByDestination = agents.groupBy(_.destination)
-    val agentsByHolidaysDestination = agents.groupBy(_.holidaysDestination)
 
     def mobilityExchanges() = exchangeInCities(agentsByDestination.toSeq, countries)
-    def holidayMobilityExchanges() = exchangeInCities(agentsByHolidaysDestination.toSeq, countries)
     def localExchanges() = exchangeInCities(agentsBySource.toSeq, countries)
 
-    def step(s: Int) =
-      if (!isHolidays(s)) {
-        mobilityExchanges()
-        localExchanges()
-      } else {
-        holidayMobilityExchanges()
-        localExchanges()
-      }
+    def step(s: Int) = {
+      mobilityExchanges()
+      localExchanges()
+    }
 
     def copyOfState = agents.map(_.copy)
 
@@ -135,8 +117,6 @@ trait Model <: Exchange {
    * @return A list of agents matching an initial state for the model.
    */
   def initializeAgents(cities: Seq[City], nbCountries: Int)(implicit rng: Random): Seq[Agent] = {
-    val touristicCities = cities.filter(_.touristic).toArray
-
     /**
      * Construct commuters and static agents for a given city.
      * @param source Residence city for the agents.
@@ -149,10 +129,6 @@ trait Model <: Exchange {
           case (_, nbCommuters) => nbCommuters
         }.sum
 
-      val nbStatics = source.population - nbCommuters
-      val nbCommuterTourists = (nbCommuters * touristRate).round.toInt
-      val nbStaticTourists = (nbStatics * touristRate).round.toInt
-
       val commuterDestinations = commutersValue.flatMap {
         case (destination, nbCommuters) => (0 until nbCommuters).map(_ => destination)
       }
@@ -161,18 +137,16 @@ trait Model <: Exchange {
       val commutersAgents =
         rng.shuffle(commuterDestinations).zipWithIndex.map {
           case (destination, i) =>
-            val touristicDestination = if (touristicCities.size > 0 && i < nbCommuterTourists) touristicCities(i % touristicCities.size) else destination
             val wallet = Wallet(source, nbCountries)
-            Agent(source, destination, touristicDestination, wallet)
+            Agent(source, destination, wallet)
         }
 
       // Static agents are only moving within their city of residence
       val staticAgents =
         (0 until source.population - commutersAgents.size).map {
           i =>
-            val touristicDestination = if (touristicCities.size > 0 && i < nbStaticTourists) touristicCities(i % touristicCities.size) else source
             val wallet = Wallet(source, nbCountries)
-            Agent(source, source, touristicDestination, wallet)
+            Agent(source, source, wallet)
         }
       commutersAgents.toList ::: staticAgents.toList
     }

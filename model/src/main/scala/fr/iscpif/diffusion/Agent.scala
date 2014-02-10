@@ -22,13 +22,11 @@ package fr.iscpif.diffusion
  *
  * @param city City of residence.
  * @param destination City of work. Might be equal to source in case of a static agent.
- * @param holidaysDestination City of holidays.
  * @param wallet Wallet containing the diffusion proportions for each country.
  */
 case class Agent(
     city: City,
     destination: City,
-    holidaysDestination: City,
     wallet: Wallet) {
-  def copy = Agent(city, destination, holidaysDestination, wallet.copy)
+  def copy = Agent(city, destination, wallet.copy)
 }

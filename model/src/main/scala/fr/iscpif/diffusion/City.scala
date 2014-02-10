@@ -25,12 +25,10 @@ package fr.iscpif.diffusion
  * @param population Total number of agent residing in the source.
  * @param x Longitude of the source.
  * @param y Latitude of the source.
- * @param touristic True if the source is a holiday destination.
  */
 case class City(
   id: Int,
   country: Int,
   population: Int,
   x: Double,
-  y: Double,
-  touristic: Boolean = false)
+  y: Double)

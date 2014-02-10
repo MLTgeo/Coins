@@ -55,7 +55,6 @@ object Simulation extends App {
       def mobilRate(city: City): Double = _mobilRate
       def touristRate: Double = 0.67
       def exchangeRate: Double = 0.5
-      override def isHolidays(s: Int) = (s % 12) < 1
     }
 
     val file = new File(param.results, "result" + distanceDecay + "_" + populationWeight + "_" + mobilRate + "_" + replication + ".txt")
