@@ -23,8 +23,11 @@ import fr.iscpif.mgo._
 import scala.util.Random
 import fr.iscpif.mgo.tools.Lazy
 import scalax.io.Resource
+import org.apache.commons.math3.stat.inference._
 
 object GenerateMatrix extends App {
+
+  val statTest = new WilcoxonSignedRankTest
 
   val empiricalCities = Model.readCities(new File(args(0)))
   // val distanceMatrix = Array.fill(cities.size, cities.size)
@@ -40,7 +43,8 @@ object GenerateMatrix extends App {
   }
 
   val empiricalMatrix = distanceMatrix(empiricalCities.toList)
-  val empiricalSum = empiricalMatrix.full.flatten.sum
+  val flatEmpiricalMatrix = empiricalMatrix.content.flatten.toArray
+  //val empiricalSum = empiricalMatrix.full.flatten.sum / 2
 
   def closestNeighbours(distance: TriangularMatrix) =
     for {
@@ -55,8 +59,8 @@ object GenerateMatrix extends App {
     } yield c.copy(x = newPos(0), y = newPos(1))
 
   def fitness(distanceMatrix: TriangularMatrix) = {
-    val syntheticSum = distanceMatrix.full.flatten.sum
-    math.abs(empiricalSum - syntheticSum)
+    val syntheticMatrix = distanceMatrix.content.flatten
+    1 - statTest.wilcoxonSignedRankTest(flatEmpiricalMatrix, syntheticMatrix.toArray, false)
   }
 
   def perturbation(m1: TriangularMatrix, m2: TriangularMatrix) = {
@@ -105,7 +109,7 @@ object GenerateMatrix extends App {
       //new GenerateMatrix with Evolution with MG with GAGenome with CounterTermination with NonDominatedElitism with GaussianMutation with SBXBoundedCrossover with ParetoRanking with StrictDominance with NoArchive with GeneticBreeding with BinaryTournamentSelection with TournamentOnRankAndDiversity with IndividualDiversityModifier with CrowdingDiversity {
       //new GenerateMatrix with Evolution with MG with GAGenome with CounterTermination with NonDominatedElitism with GaussianMutation with SBXBoundedCrossover with ParetoRanking with StrictDominance with NoArchive with GeneticBreeding with BinaryTournamentSelection with TournamentOnRankAndDiversity with RankDiversityModifier with CrowdingDiversity {
 
-      def isGood(individual: Individual[G, P, F]): Boolean = individual.fitness.values.head < 10000
+      def isGood(individual: Individual[G, P, F]): Boolean = individual.fitness.values.head < 0.05
 
       def genomeSize = empiricalCities.size * 2
       def archiveSize = 100
@@ -120,8 +124,8 @@ object GenerateMatrix extends App {
     p.evolve.untilConverged {
       s =>
         //println(s.individuals.flatMap(_.fitness.values).mkString(","))
-        println(s.generation + " " + s.individuals.flatMap(_.fitness.values).sum)
-        save(s.individuals.map(i => newCities(p.values.get(p.scale(i.genome)))), s.generation)
+        println(s.generation + " " + s.individuals.flatMap(_.fitness.values).min + " " + s.archive.size)
+        save(s.archive.map(i => newCities(p.values.get(p.scale(i.genome)))), s.generation)
     }.individuals
 
   def save(configuations: Seq[Seq[City]], generation: Int) = {
