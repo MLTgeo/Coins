@@ -20,6 +20,7 @@ package fr.iscpif.diffusion
 import util.Random
 import math._
 import scala.io.Source
+import scalax.io.Resource
 import java.io.File
 
 object Model {
@@ -50,6 +51,15 @@ object Model {
         val y = line(4).toDouble
         City(id, country, population, x, y)
     }.toIndexedSeq
+  }
+
+  def writeCities(cities: Seq[City], towns: File) = {
+    towns.delete
+    val output = Resource.fromFile(towns)
+    output.append("id\tcountry\tpopulation\tx\ty\n")
+    for {
+      c <- cities
+    } output.append(s"${c.id}\t${c.country}\t${c.population}\t${c.x}\t${c.y}\n")
   }
 
 }

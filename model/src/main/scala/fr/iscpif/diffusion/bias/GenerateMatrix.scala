@@ -109,7 +109,7 @@ object GenerateMatrix extends App {
       //new GenerateMatrix with Evolution with MG with GAGenome with CounterTermination with NonDominatedElitism with GaussianMutation with SBXBoundedCrossover with ParetoRanking with StrictDominance with NoArchive with GeneticBreeding with BinaryTournamentSelection with TournamentOnRankAndDiversity with IndividualDiversityModifier with CrowdingDiversity {
       //new GenerateMatrix with Evolution with MG with GAGenome with CounterTermination with NonDominatedElitism with GaussianMutation with SBXBoundedCrossover with ParetoRanking with StrictDominance with NoArchive with GeneticBreeding with BinaryTournamentSelection with TournamentOnRankAndDiversity with RankDiversityModifier with CrowdingDiversity {
 
-      def isGood(individual: Individual[G, P, F]): Boolean = individual.fitness.values.head < 0.05
+      def isGood(individual: Individual[G, P, F]): Boolean = individual.fitness.values.head < 0.02
 
       def genomeSize = empiricalCities.size * 2
       def archiveSize = 100
@@ -131,12 +131,7 @@ object GenerateMatrix extends App {
   def save(configuations: Seq[Seq[City]], generation: Int) = {
     for {
       (cities, i) <- configuations.zipWithIndex
-    } {
-      val output = Resource.fromFile(s"/tmp/matrices/matrix$generation/$i.csv")
-      for {
-        c <- cities
-      } output.append(s"${c.x},${c.y}\n")
-    }
+    } Model.writeCities(cities, new File(s"/tmp/matrices/matrix$generation/$i.csv"))
   }
 
 }
