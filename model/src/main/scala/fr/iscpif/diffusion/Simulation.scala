@@ -55,7 +55,6 @@ object Simulation extends App {
       def distanceDecay: Double = _distanceDecay
       def populationWeight: Double = _populationWeight
       def mobilRate(city: City): Double = _mobilRate
-      def touristRate: Double = 0.67
       def exchangeRate: Double = 0.5
     }
 
