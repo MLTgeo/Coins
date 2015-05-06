@@ -34,6 +34,7 @@ object Simulation extends App {
   param.results.mkdirs
 
   val cities = Model.readCities(param.towns)
+  def steps = 100
 
   for {
     distanceDecay <- param.distanceDecay.par
@@ -69,7 +70,7 @@ object Simulation extends App {
     }
 
     for {
-      (s, i) <- model.states(cities)(rng).take(100).zipWithIndex
+      (s, i) <- model.states(cities)(rng).take(steps).zipWithIndex
     } saveState(i, s)
   }
 
