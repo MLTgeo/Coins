@@ -18,9 +18,11 @@
 package fr.iscpif.diffusion
 
 import java.io._
+import fr.iscpif.diffusion.too.Parse
+
 import scala.io.Source
-import fr.iscpif.diffusion.tool.Parse
-import org.apache.commons.math3.random.{ RandomAdaptor, Well44497b }
+import tool._
+import org.apache.commons.math3.random._
 import fr.iscpif.diffusion.tool.Converter._
 import scalax.io.Resource
 import Model._
