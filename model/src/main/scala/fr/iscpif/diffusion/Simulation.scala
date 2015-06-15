@@ -18,14 +18,6 @@
 package fr.iscpif.diffusion
 
 import java.io._
-import fr.iscpif.diffusion.too.Parse
-
-import scala.io.Source
-import tool._
-import org.apache.commons.math3.random._
-import fr.iscpif.diffusion.tool.Converter._
-import scalax.io.Resource
-import Model._
 
 object Simulation extends App {
 
@@ -34,7 +26,7 @@ object Simulation extends App {
   param.results.mkdirs
 
   val cities = Model.readCities(param.towns)
-  def steps = 100
+  def steps = 10
 
   for {
     distanceDecay <- param.distanceDecay.par
