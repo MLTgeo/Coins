@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package fr.iscpif.diffusion.too
+package fr.iscpif.diffusion.tool
 
 import scopt._
 import java.io.File

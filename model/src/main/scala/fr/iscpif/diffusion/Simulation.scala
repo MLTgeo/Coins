@@ -18,6 +18,10 @@
 package fr.iscpif.diffusion
 
 import java.io._
+import org.apache.commons.math3.random._
+import tool._
+
+import scalax.io._
 
 object Simulation extends App {
 
@@ -56,7 +60,7 @@ object Simulation extends App {
 
     val out = Resource.fromFile(file)
     def saveState(s: Int, agents: Seq[Agent]) = {
-      val citiesCoins = agentsToCityWallets(agents, cities).flatten
+      val citiesCoins = Model.agentsToCityWallets(agents, cities).flatten
       val write = param.samples.map(_.contains(s)).getOrElse(true)
       if (write) out.append(s"$distanceDecay,$populationWeight,$mobilRate,$replication,$s,${citiesCoins.mkString(",")}\n")
     }
