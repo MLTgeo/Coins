@@ -1,0 +1,4 @@
+id	country	population	x	y
+0	0	42750	1	1
+1	1	42750	2	1
+2	2	85000	3	1
