@@ -1,0 +1,2458 @@
+Le script a débuté sur jeu. 25 juin 2015 10:27:42 CEST
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects/coins(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [1m±(B[m ls sci[Kripts/
+join.scala  sort.scala
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects/coins(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [33m4s(B[m [1m±(B[m git status
+Sur la branche CoinsModel
+Votre branche est à jour avec 'origin/CoinsModel'.
+Modifications qui ne seront pas validées :
+  (utilisez "git add/rm <fichier>..." pour mettre à jour ce qui sera validé)
+  (utilisez "git checkout -- <fichier>..." pour annuler les modifications dans la copie de travail)
+
+	[31msupprimé :        model/Inputs.txt[m
+	[31msupprimé :        model/build.sh[m
+	[31msupprimé :        model/empirics/Empirics.csv[m
+	[31msupprimé :        model/empirics/NUTSID.txt[m
+
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+
+	[31mmodel/project/build.properties[m
+	[31mtypescript[m
+
+aucune modification n'a été ajoutée à la validation (utilisez "git add" ou "git commit -a")
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects/coins(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [33m17s(B[m [1m±(B[m ls
+[0m[01;34mmodel[0m  [01;34mscripts[0m  typescript
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects/coins(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [33m8m8s(B[m [1m±(B[m scala
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+Welcome to Scala version 2.11.6 (OpenJDK 64-Bit Server VM, Java 1.8.0_45-internal).
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> List()[13G1)[14G,)[15G )[16G9)[17G,)[18G )[19G8)[20G[21G~.[22G[K[21G[K.mkString()[31G")[32G")[33G[32G,")[33G[35G
+res0: String = 1,9,8
+
+scala> :quit
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects/coins(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [33m1h2m18s(B[m [1m±(B[m j op[K[K[K[Ksbt
+/home/reuillon/Documents/Recherche/Projects/coins doesn't appear to be an sbt project.
+If you want to start sbt anyway, run:
+  /home/reuillon/bin/sbt -sbt-create
+
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects/coins(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [33m2s(B[m [35m1(B[m [1m±(B[m cd model/
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins/model[reuillon(B[m[32m:(B[m[1m~/Documents … he/Projects/coins/model(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [33m2s(B[m [1m±(B[m sb[K[Kls
+build.sbt  [0m[01;34mproject[0m  [01;34msrc[0m  [01;34mtarget[0m
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins/model[reuillon(B[m[32m:(B[m[1m~/Documents … he/Projects/coins/model(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [33m2s(B[m [1m±(B[m cd ..
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects/coins(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [1m±(B[m ls
+[0m[01;34mmodel[0m  [01;34mscripts[0m  typescript
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/coins[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects/coins(B[m] [31mCoinsModel(B[m([35m+0/-380(B[m)[31m*(B[m [33m2s(B[m [1m±(B[m cd ..
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects(B[m] [33m3s(B[m [1m$(B[m cd space
+bash: cd: space: Aucun fichier ou dossier de ce type
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects(B[m] [33m2s(B[m [35m1(B[m [1m$(B[m ls
+[0m[01;34maurel[0m          [01;34measyabc-scala[0m  [01;34mmgo[0m                                     [01;34mquadtree[0m     [01;34msimpopnet[0m
+[01;34maverage[0m        [01;34mfabien[0m         [01;34mmoder[0m                                   [01;34mrelativeTSP[0m  [01;34msimprocess[0m
+[01;34mcabbage[0m        [01;34mfamily[0m         [01;34mmoleviz[0m                                 [01;34mrnotes[0m       [01;34msimpuzzle[0m
+[01;34mcasein[0m         [01;34mgafootp[0m        [01;34mmyopenmole[0m                              [01;34mromain[0m       [01;34mslocalfit[0m
+[01;34mchallengesncf[0m  [01;34mgama-platform[0m  [01;34mmyopenmoleplugin[0m                        [01;34mscala[0m        [01;34mspacebias[0m
+[01;34mclusterize[0m     [01;34mgeoscale[0m       [01;34mnanastar[0m                                [01;34mscalabc[0m      [01;34mspacematters[0m
+[01;34mcoin_bck[0m       [01;34mgridscale[0m      [01;34mnetbinox[0m                                [01;34mscalanlp[0m     [01;34mspeedprofile[0m
+[01;34mcoins[0m          [01;34mhello[0m          [01;34mnetbinox-maven[0m                          [01;34mscalasim[0m     [01;34msshj[0m
+[01;34mcrawler[0m        [01;34mhomepage[0m       [01;34mnlp[0m                                     [01;34mScalatex[0m     [01;34mtarget[0m
+[01;34mcrunch[0m         [01;34mideas[0m          [01;34mopenmole[0m                                [01;34mscala_tuto[0m   [01;32mtoPolux.sh[0m
+[01;34mdcl[0m            [01;34mjanet[0m          [01;34mopenmole-com[0m                            [01;34mscalaxb[0m      [01;32mtoVil.sh[0m
+[01;34mdemagma[0m        [01;34mJGlobus[0m        [01;34mopenMoleGamaPlugin[0m                      [01;34mscardio[0m      [01;32mtoZebluon.sh[0m
+diff           [01;34mjsaga[0m          [01;34mopenmole-hello[0m                          [01;34mschelling[0m    [01;34mviability[0m
+[01;34mdistance[0m       [01;34mlogistic[0m       [01;34morg.openmole.plugin.method.sensitivity[0m  [01;34mschelling3c[0m  [01;34mvizutils[0m
+[01;34mdistrng[0m        [01;34mlotkavoltera[0m   [01;34mpi[0m                                      [01;34msearchnet[0m    [01;34myapa[0m
+[01;34mdoe[0m            [01;34mmasslossmodel[0m  [01;34mpublications[0m                            [01;34msimpoplocal[0m
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects[reuillon(B[m[32m:(B[m[1m~/Documents/Recherche/Projects(B[m] [1m$(B[m ls[K[Kcd spacematters/
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacemattersl[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+21/-4(B[m)[31m*(B[m [33m4s(B[m [1m±(B[m ls
+[0m[01;34minitialise[0m  [01;34mmodel[0m  [01;34mopenmole[0m  [01;34mproject[0m  README.md  schelling_sims.csv  [01;34msrc[0m  [01;34mtarget[0m  [01;34mvisualisation[0m
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematterss[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+21/-4(B[m)[31m*(B[m [1m±(B[m sbt
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project 
+/                                                                  
+initialise                                                         
+model                                                              
+spacematters                                                       
+{file:/home/reuillon/Documents/Recherche/Projects/spacematters/}   
+> project 
+/                                                                  
+initialise                                                         
+model                                                              
+spacematters                                                       
+{file:/home/reuillon/Documents/Recherche/Projects/spacematters/}   
+> project in> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 2 Scala sources {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mFormatting 13 Scala sources {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 2 Scala sources {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile).[0m
+[0m[[0minfo[0m] [0mReformatted 6 Scala sources {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/Schelling.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity.initial._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/Schelling.scala:20: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity.move._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Moves.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/Schelling.scala:38: not found: value Move[0m
+[0m[[31merror[0m] [0m      Move(color, origin, destination) <- rng.shuffle(moves(state))[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/Schelling.scala:40: value isFull is not a member of Any[0m
+[0m[[31merror[0m] [0m      if !destinationCell.isFull[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/InitialState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/stop/SpeilmanStop.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:141: type Quantity takes type parameters[0m
+[0m[[31merror[0m] [0m  def moran(state: State, quantity: Quantity): Double = {[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m11 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 6 s, completed 25 juin 2015 11:39:10[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Moves.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/InitialState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/stop/SpeilmanStop.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:141: type Quantity takes type parameters[0m
+[0m[[31merror[0m] [0m  def moran(state: State, quantity: Quantity): Double = {[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m7 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 2 s, completed 25 juin 2015 11:39:43[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Moves.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/InitialState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/stop/SpeilmanStop.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:141: type Quantity takes type parameters[0m
+[0m[[31merror[0m] [0m  def moran(state: State, quantity: Quantity): Double = {[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m6 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:40:06[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/InitialState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/stop/SpeilmanStop.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:141: type Quantity takes type parameters[0m
+[0m[[31merror[0m] [0m  def moran(state: State, quantity: Quantity): Double = {[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m5 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:40:27[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/stop/SpeilmanStop.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:141: type Quantity takes type parameters[0m
+[0m[[31merror[0m] [0m  def moran(state: State, quantity: Quantity): Double = {[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0mfour errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:40:52[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:141: type Quantity takes type parameters[0m
+[0m[[31merror[0m] [0m  def moran(state: State, quantity: Quantity): Double = {[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0mthree errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:41:14[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 4 Scala sources {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/Schelling.scala:33: not found: type State[0m
+[0m[[31merror[0m] [0m  def step(state: State)(implicit rng: Random) = {[0m
+[0m[[31merror[0m] [0m                  ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Moves.scala:25: not found: type State[0m
+[0m[[31merror[0m] [0m  def moves(state: State)(implicit rng: Random): Seq[Move] = {[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/Schelling.scala:38: constructor cannot be instantiated to expected type;[0m
+[0m[[31merror[0m] [0m found   : (T1, T2)[0m
+[0m[[31merror[0m] [0m required: Nothing[0m
+[0m[[31merror[0m] [0m      Move(color, origin, destination) <- rng.shuffle(moves(state))[0m
+[0m[[31merror[0m] [0m          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/Schelling.scala:47: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/InitialState.scala:23: not found: type State[0m
+[0m[[31merror[0m] [0m  def initialState(implicit rng: Random): State[0m
+[0m[[31merror[0m] [0m                                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Any[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:162: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Any[0m
+[0m[[31merror[0m] [0m required: fr.iscpif.spacematters.model.Cell[0m
+[0m[[31merror[0m] [0m            else (colorRatio(cellJ) - globalColorRatio.toDouble)[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:20: object State is not a member of package fr.iscpif.spacematters.model[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.spacematters.model.{ Position, State, Color }[0m
+[0m[[31merror[0m] [0m       ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:35: not found: type State[0m
+[0m[[31merror[0m] [0m  def unsatisfieds(state: State): Seq[Unsatisfied] = {[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Moves.scala:32: not found: type State[0m
+[0m[[31merror[0m] [0m  def destination(state: State, unsatisfied: Unsatisfied)(implicit rng: Random): Position[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Moves.scala:37: not found: type State[0m
+[0m[[31merror[0m] [0m  def destination(state: State, unsatisfied: Unsatisfied)(implicit rng: Random) = {[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:25: not found: type State[0m
+[0m[[31merror[0m] [0m  def neighbors(state: State, position: Position) =[0m
+[0m[[31merror[0m] [0m                       ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:28: not found: type State[0m
+[0m[[31merror[0m] [0m  def unsatisfied(state: State, position: Position, color: Color) = {[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: ambiguous implicit values:[0m
+[0m[[31merror[0m] [0m both object BigIntIsIntegral in object Numeric of type scala.math.Numeric.BigIntIsIntegral.type[0m
+[0m[[31merror[0m] [0m and object ShortIsIntegral in object Numeric of type scala.math.Numeric.ShortIsIntegral.type[0m
+[0m[[31merror[0m] [0m match expected type Numeric[B][0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:43: not found: type State[0m
+[0m[[31merror[0m] [0m  def unsatisifedRatio(state: State) = {[0m
+[0m[[31merror[0m] [0m                              ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/stop/SpeilmanStop.scala:25: not found: type State[0m
+[0m[[31merror[0m] [0m  case class ResultState(step: Int, state: State)[0m
+[0m[[31merror[0m] [0m                                           ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/stop/SpeilmanStop.scala:36: not found: type State[0m
+[0m[[31merror[0m] [0m    def lastState(window: Seq[((State, Double), Int)]): ResultState = {[0m
+[0m[[31merror[0m] [0m                                ^[0m
+[0m[[31merror[0m] [0m20 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:48:57[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 2 Scala sources {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:19: object schelling is not a member of package fr.iscpif[0m
+[0m[[31merror[0m] [0mimport fr.iscpif.schelling.quantity._[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: value population is not a member of Any[0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: ambiguous implicit values:[0m
+[0m[[31merror[0m] [0m both object BigIntIsIntegral in object Numeric of type scala.math.Numeric.BigIntIsIntegral.type[0m
+[0m[[31merror[0m] [0m and object ShortIsIntegral in object Numeric of type scala.math.Numeric.ShortIsIntegral.type[0m
+[0m[[31merror[0m] [0m match expected type Numeric[B][0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:31: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : fr.iscpif.spacematters.model.Cell => Int[0m
+[0m[[31merror[0m] [0m required: Any => ?[0m
+[0m[[31merror[0m] [0m    val colorPopulation = neighbourCells.map(color.cellColor.get).sum[0m
+[0m[[31merror[0m] [0m                                                             ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Any[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:162: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Any[0m
+[0m[[31merror[0m] [0m required: fr.iscpif.spacematters.model.Cell[0m
+[0m[[31merror[0m] [0m            else (colorRatio(cellJ) - globalColorRatio.toDouble)[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0m7 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:49:52[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: value population is not a member of Any[0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: ambiguous implicit values:[0m
+[0m[[31merror[0m] [0m both object BigIntIsIntegral in object Numeric of type scala.math.Numeric.BigIntIsIntegral.type[0m
+[0m[[31merror[0m] [0m and object ShortIsIntegral in object Numeric of type scala.math.Numeric.ShortIsIntegral.type[0m
+[0m[[31merror[0m] [0m match expected type Numeric[B][0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : fr.iscpif.spacematters.model.Cell => Int[0m
+[0m[[31merror[0m] [0m required: Any => ?[0m
+[0m[[31merror[0m] [0m    val colorPopulation = neighbourCells.map(color.cellColor.get).sum[0m
+[0m[[31merror[0m] [0m                                                             ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Any[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:162: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Any[0m
+[0m[[31merror[0m] [0m required: fr.iscpif.spacematters.model.Cell[0m
+[0m[[31merror[0m] [0m            else (colorRatio(cellJ) - globalColorRatio.toDouble)[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0m6 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:50:17[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 2 Scala sources {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: value map is not a member of fr.iscpif.spacematters.model.Cell[0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: value map is not a member of fr.iscpif.spacematters.model.Cell[0m
+[0m[[31merror[0m] [0m    val colorPopulation = neighbourCells.map(color.cellColor.get).sum[0m
+[0m[[31merror[0m] [0m                                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: missing arguments for method get in class PLens;[0m
+[0m[[31merror[0m] [0mfollow this method with `_' if you want to treat it as a partially applied function[0m
+[0m[[31merror[0m] [0m    val colorPopulation = neighbourCells.map(color.cellColor.get).sum[0m
+[0m[[31merror[0m] [0m                                                             ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:194: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:30: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[fr.iscpif.spacematters.model.Cell][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:27: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : scala.collection.immutable.IndexedSeq[Nothing][0m
+[0m[[31merror[0m] [0m required: fr.iscpif.spacematters.model.Cell[0m
+[0m[[31merror[0m] [0m      oi <- -neighborhoodSize to neighborhoodSize[0m
+[0m[[31merror[0m] [0m         ^[0m
+[0m[[31merror[0m] [0m8 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:53:40[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: value map is not a member of fr.iscpif.spacematters.model.Cell[0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: value map is not a member of fr.iscpif.spacematters.model.Cell[0m
+[0m[[31merror[0m] [0m    val colorPopulation = neighbourCells.map(color.cellColor.get).sum[0m
+[0m[[31merror[0m] [0m                                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:30: missing arguments for method get in class PLens;[0m
+[0m[[31merror[0m] [0mfollow this method with `_' if you want to treat it as a partially applied function[0m
+[0m[[31merror[0m] [0m    val colorPopulation = neighbourCells.map(color.cellColor.get).sum[0m
+[0m[[31merror[0m] [0m                                                             ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:194: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:30: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:27: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : scala.collection.immutable.IndexedSeq[Nothing][0m
+[0m[[31merror[0m] [0m required: T[0m
+[0m[[31merror[0m] [0m      oi <- -neighborhoodSize to neighborhoodSize[0m
+[0m[[31merror[0m] [0m         ^[0m
+[0m[[31merror[0m] [0m8 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:54:23[0m
+> 
+> 
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:30: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: ambiguous implicit values:[0m
+[0m[[31merror[0m] [0m both object BigIntIsIntegral in object Numeric of type scala.math.Numeric.BigIntIsIntegral.type[0m
+[0m[[31merror[0m] [0m and object ShortIsIntegral in object Numeric of type scala.math.Numeric.ShortIsIntegral.type[0m
+[0m[[31merror[0m] [0m match expected type Numeric[B][0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:194: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m6 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:54:55[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:30: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[fr.iscpif.spacematters.model.Cell][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: ambiguous implicit values:[0m
+[0m[[31merror[0m] [0m both object BigIntIsIntegral in object Numeric of type scala.math.Numeric.BigIntIsIntegral.type[0m
+[0m[[31merror[0m] [0m and object ShortIsIntegral in object Numeric of type scala.math.Numeric.ShortIsIntegral.type[0m
+[0m[[31merror[0m] [0m match expected type Numeric[B][0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:194: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m6 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:55:15[0m
+> run[3G[Krun
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/Matrix.scala:24: not found: value ç[0m
+[0m[[31merror[0m] [0m  implicit val emptyCell = ç[0m
+[0m[[31merror[0m] [0m                           ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Neighborhood.scala:30: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[fr.iscpif.spacematters.model.Cell][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                          ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/move/Unsatisfieds.scala:29: ambiguous implicit values:[0m
+[0m[[31merror[0m] [0m both object BigIntIsIntegral in object Numeric of type scala.math.Numeric.BigIntIsIntegral.type[0m
+[0m[[31merror[0m] [0m and object ShortIsIntegral in object Numeric of type scala.math.Numeric.ShortIsIntegral.type[0m
+[0m[[31merror[0m] [0m match expected type Numeric[B][0m
+[0m[[31merror[0m] [0m    val population = neighbourCells.map(_.population).sum[0m
+[0m[[31merror[0m] [0m                                                      ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:194: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m7 errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:56:00[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/initial/RandomState.scala:55: not found: value State[0m
+[0m[[31merror[0m] [0m    State(builder)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:194: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0mthree errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:56:08[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:194: could not find implicit value for parameter empty: fr.iscpif.spacematters.model.Empty[T][0m
+[0m[[31merror[0m] [0m    } yield state(i + oi)(j + oj)[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/model/src/main/scala/fr/iscpif/spacematters/model/metric/package.scala:161: value population is not a member of Nothing[0m
+[0m[[31merror[0m] [0m            if (cellJ.population == 0) 0[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0mtwo errors found[0m
+[0m[[31merror[0m] [0m(model/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:57:22[0m
+> 
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere were four feature warnings; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/initialise/src/main/scala/fr/iscpif/spacematters/initialise/IndicatorTest.scala:24: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Seq[Seq[Int]][0m
+[0m[[31merror[0m] [0m required: fr.iscpif.spacematters.model.Matrix[?][0m
+[0m[[31merror[0m] [0m  println(slope(matrix, identity))[0m
+[0m[[31merror[0m] [0m                ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[31merror[0m] [0m(initialise/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 6 s, completed 25 juin 2015 11:58:26[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mCompiling 13 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere were four feature warnings; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/initialise/src/main/scala/fr/iscpif/spacematters/initialise/IndicatorTest.scala:24: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Seq[Seq[Int]][0m
+[0m[[31merror[0m] [0m required: fr.iscpif.spacematters.model.Matrix[?][0m
+[0m[[31merror[0m] [0m  println(slope(matrix, identity))[0m
+[0m[[31merror[0m] [0m                ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[31merror[0m] [0m(initialise/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 5 s, completed 25 juin 2015 11:59:15[0m
+> 
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/initialise/src/main/scala/fr/iscpif/spacematters/initialise/IndicatorTest.scala:25: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Nothing => Nothing[0m
+[0m[[31merror[0m] [0m required: fr.iscpif.spacematters.model.Quantity[Int][0m
+[0m[[31merror[0m] [0m    (which expands to)  Int => Int[0m
+[0m[[31merror[0m] [0m  println(slope(matrix, identity))[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[31merror[0m] [0m(initialise/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 11:59:45[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/initialise/src/main/scala/fr/iscpif/spacematters/initialise/IndicatorTest.scala:25: missing parameter type[0m
+[0m[[31merror[0m] [0m  println(slope(matrix, i ⇒ i))[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[31merror[0m] [0m(initialise/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:00:17[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+NaN
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:00:34[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+NaN
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:00:48[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+NaN
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:04:49[0m
+> run
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+NaN
+[0m[[32msuccess[0m] [0mTotal time: 0 s, completed 25 juin 2015 12:04:53[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+NaN
+[0m[[32msuccess[0m] [0mTotal time: 2 s, completed 25 juin 2015 12:05:34[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+2.3978952727983707,-Infinity
+2.3978952727983707,0.0
+2.3978952727983707,0.6931471805599453
+2.3978952727983707,1.0986122886681098
+NaN
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:06:25[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+0.0,2.302585092994046
+0.6931471805599453,2.302585092994046
+1.0986122886681098,2.302585092994046
+1.3862943611198906,2.302585092994046
+0.0
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:06:52[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile).[0m
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-0.6706719891559412
+[0m[[32msuccess[0m] [0mTotal time: 2 s, completed 25 juin 2015 12:07:45[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/initialise/src/main/scala/fr/iscpif/spacematters/initialise/IndicatorTest.scala:25: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Int => Int[0m
+[0m[[31merror[0m] [0m required: fr.iscpif.spacematters.model.Quantity[Double][0m
+[0m[[31merror[0m] [0m    (which expands to)  Double => Int[0m
+[0m[[31merror[0m] [0m  println(slope(matrix, identity[Int]))[0m
+[0m[[31merror[0m] [0m                                ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[31merror[0m] [0m(initialise/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 0 s, completed 25 juin 2015 12:08:27[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-4.533515056059359
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:08:37[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-5.519089040453718
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:08:50[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-0.5666320945966437
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:08:59[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-1.6079039102401298
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:11:32[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-4.223209411815791
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:12:02[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-4.216112928615949
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:12:25[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-8.419871770257279
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:12:47[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-8.422751118814901
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed 25 juin 2015 12:13:04[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+0.0,11.999995137341756
+0.6931471805599453,7.9996785794994505
+1.0986122886681098,3.9889840465642745
+1.3862943611198906,0.0
+-8.422751118814901
+[0m[[32msuccess[0m] [0mTotal time: 2 s, completed 25 juin 2015 12:14:14[0m
+> run[3G[Krun
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.IndicatorTest [0m
+-3.7119670666607734
+[0m[[32msuccess[0m] [0mTotal time: 2 s, completed 25 juin 2015 12:18:19[0m
+> u[3G[K]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+48/-21(B[m)(B[m [33m4h17m19s(B[m [1m±(B[m sbt
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/project/target/scala-2.10/sbt-0.13/classes...[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise...[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving fr.iscpif#spacematters_2.11;1.0 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-math3;3.5 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-core_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-core_2.11;7.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-generic_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.chuusai#shapeless_2.11;2.0.0 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-macro_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.scala-incubator.io#scala-io-core_2.11;0.4.3-1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.madgag#scala-arm_2.11;1.3.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.plugins#scala-continuations-library_2.11;1.0.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving fr.iscpif#mgo_2.11;1.80-SNAPSHOT ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving fr.iscpif#mgo_2.11;1.80-SNAPSHOT ...[0m
+[0m[[33mwarn[0m] [0m	module not found: fr.iscpif#mgo_2.11;1.80-SNAPSHOT[0m
+[0m[[33mwarn[0m] [0m==== local: tried[0m
+[0m[[33mwarn[0m] [0m  /home/reuillon/.ivy2/local/fr.iscpif/mgo_2.11/1.80-SNAPSHOT/ivys/ivy.xml[0m
+[0m[[33mwarn[0m] [0m==== public: tried[0m
+[0m[[33mwarn[0m] [0m  https://repo1.maven.org/maven2/fr/iscpif/mgo_2.11/1.80-SNAPSHOT/mgo_2.11-1.80-SNAPSHOT.pom[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
+[0m[[33mwarn[0m] [0m	::::::::::::::::::::::::::::::::::::::::::::::[0m
+[0m[[33mwarn[0m] [0m	::          UNRESOLVED DEPENDENCIES         ::[0m
+[0m[[33mwarn[0m] [0m	::::::::::::::::::::::::::::::::::::::::::::::[0m
+[0m[[33mwarn[0m] [0m	:: fr.iscpif#mgo_2.11;1.80-SNAPSHOT: not found[0m
+[0m[[33mwarn[0m] [0m	::::::::::::::::::::::::::::::::::::::::::::::[0m
+[0m[[33mwarn[0m] [0m[0m
+[0m[[33mwarn[0m] [0m	Note: Unresolved dependencies path:[0m
+[0m[[33mwarn[0m] [0m		fr.iscpif:mgo_2.11:1.80-SNAPSHOT (/home/reuillon/Documents/Recherche/Projects/spacematters/project/Build.scala#L25)[0m
+[0m[[33mwarn[0m] [0m		  +- fr.iscpif.spacematters:initialise_2.11:0.1-SNAPSHOT[0m
+[0m[[31mtrace[0m] [0mStack trace suppressed: run [34mlast initialise/*:update[0m for the full output.[0m
+[0m[[31merror[0m] [0m(initialise/*:[31mupdate[0m) sbt.ResolveException: unresolved dependency: fr.iscpif#mgo_2.11;1.80-SNAPSHOT: not found[0m
+[0m[[31merror[0m] [0mTotal time: 2 s, completed 25 juin 2015 15:56:26[0m
+> ]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+51/-22(B[m)(B[m [33m2m10s(B[m [1m±(B[m sbt
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/project/target/scala-2.10/sbt-0.13/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/project/Build.scala:20: No implicit for Append.Value[Seq[sbt.Resolver], xsbti.Predefined] found,[0m
+[0m[[31merror[0m] [0m  so xsbti.Predefined cannot be appended to Seq[sbt.Resolver][0m
+[0m[[31merror[0m] [0m      resolvers += Predefined.SonatypeOSSSnapshots[0m
+[0m[[31merror[0m] [0m                ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[31merror[0m] [0m(compile:[31mcompileIncremental[0m) Compilation failed[0m
+Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? ]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+51/-22(B[m)(B[m [33m1m10s(B[m [35m1(B[m [1m±(B[m sbt
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/project/target/scala-2.10/sbt-0.13/classes...[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mUpdating {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model...[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-math3;3.5 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-core_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-core_2.11;7.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-generic_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.chuusai#shapeless_2.11;2.0.0 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-macro_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.scala-incubator.io#scala-io-core_2.11;0.4.3-1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.madgag#scala-arm_2.11;1.3.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.plugins#scala-continuations-library_2.11;1.0.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
+[0m[[0minfo[0m] [0mDone updating.[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise...[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving fr.iscpif#spacematters_2.11;1.0 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-math3;3.5 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-core_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-core_2.11;7.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-generic_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.chuusai#shapeless_2.11;2.0.0 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.julien-truffaut#monocle-macro_2.11;1.1.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.github.scala-incubator.io#scala-io-core_2.11;0.4.3-1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving com.madgag#scala-arm_2.11;1.3.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.plugins#scala-continuations-library_2.11;1.0.1 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving fr.iscpif#mgo_2.11;1.80-SNAPSHOT ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving fr.iscpif#mgo_2.11;1.80-SNAPSHOT ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.6 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 ...[0m
+[A[2K[0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
+[0m[[0minfo[0m] [0mdownloading https://oss.sonatype.org/content/repositories/snapshots/fr/iscpif/mgo_2.11/1.80-SNAPSHOT/mgo_2.11-1.80-SNAPSHOT.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] fr.iscpif#mgo_2.11;1.80-SNAPSHOT!mgo_2.11.jar (25123ms)[0m
+[0m[[0minfo[0m] [0mDone updating.[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+11,12,9,10,14
+10,9,10,10,14
+10,10,11,4,4
+15,3,10,13,12
+13,9,7,5,10
+10,3,15,13,13
+9,10,16,10,9
+10,10,10,15,10
+10,11,3,15,8
+6,6,7,10,11
+1,11,22,7,10
+8,14,19,17,6
+5,5,25,10,2
+17,1,7,2,11
+9,13,1,17,10
+7,10,9,15,5
+10,5,17,10,13
+1,10,10,14,10
+10,10,10,20,9
+8,10,7,7,13
+10,10,10,8,9
+12,9,7,10,11
+10,15,10,2,3
+5,13,9,7,13
+15,17,12,3,11
+27,10,10,10,10
+5,4,10,2,25
+18,10,8,12,1
+8,2,2,14,7
+11,10,8,10,10
+3,11,2,15,11
+10,5,16,2,29
+13,15,10,14,2
+10,2,9,12,10
+8,8,15,10,8
+3,10,12,23,11
+4,6,11,10,2
+10,12,7,8,10
+7,8,10,13,19
+16,8,9,11,10
+10,16,14,10,2
+1,10,2,12,18
+8,3,6,11,19
+10,14,21,10,5
+10,10,6,9,13
+7,15,11,4,14
+5,6,14,10,3
+8,11,10,17,8
+6,6,10,10,7
+10,14,10,14,16
+9,2,7,1,14
+7,9,10,14,18
+7,10,19,10,8
+13,12,10,15,13
+9,7,8,10,6
+2,10,10,6,17
+4,10,10,8,21
+18,6,14,10,14
+10,3,1,12,10
+19,5,4,16,10
+3,4,10,10,7
+10,10,15,14,23
+5,2,20,10,3
+1,10,1,10,15
+4,19,17,10,17
+[0m[[32msuccess[0m] [0mTotal time: 42 s, completed 25 juin 2015 16:00:24[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/initialise/src/main/scala/fr/iscpif/spacematters/initialise/Initialise.scala:120: value filter is not a member of (Seq[fr.iscpif.spacematters.initialise.Initialise.pse.G], Seq[fr.iscpif.spacematters.initialise.Initialise.pse.P])[0m
+[0m[[31merror[0m] [0m    (w, is) ← res.population.map(i ⇒ i.genome -> i.phenotype).unzip[0m
+[0m[[31merror[0m] [0m                                                              ^[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/initialise/src/main/scala/fr/iscpif/spacematters/initialise/Initialise.scala:122: value matrix is not a member of Any[0m
+[0m[[31merror[0m] [0m    println(w.matrix.map(_.mkString(",")).mkString("\n"))[0m
+[0m[[31merror[0m] [0m              ^[0m
+[0m[[31merror[0m] [0mtwo errors found[0m
+[0m[[31merror[0m] [0m(initialise/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 16:03:17[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+11,12,9,10,14
+10,9,10,10,14
+10,10,11,4,4
+15,3,10,13,12
+13,9,7,5,10
+List(-0.05601144217989698, -0.3672653666709129, 0.9326644518616276, 0.9822508244858257)
+
+10,3,15,13,13
+9,10,16,10,9
+10,10,10,15,10
+10,11,3,15,8
+6,6,7,10,11
+List(-0.013570656118523393, -0.387209299301623, 0.882921879179847, 0.9811708472423646)
+
+1,11,22,7,10
+8,14,19,17,6
+5,5,25,10,2
+17,1,7,2,11
+9,13,1,17,10
+List(-0.03829529160862433, -0.9299389212077709, 0.8576029197630965, 0.9271049968736274)
+
+7,10,9,15,5
+10,5,17,10,13
+1,10,10,14,10
+10,10,10,20,9
+8,10,7,7,13
+List(-1.0, -1.0, -1.0, -1.0)
+
+10,10,10,8,9
+12,9,7,10,11
+10,15,10,2,3
+5,13,9,7,13
+15,17,12,3,11
+List(-0.010894924441996325, -0.46770351931476206, 0.9186094143185434, 0.9744983442378017)
+
+27,10,10,10,10
+5,4,10,2,25
+18,10,8,12,1
+8,2,2,14,7
+11,10,8,10,10
+List(-0.06829367731596353, -0.7607637946331375, 0.9605445561928195, 0.9398562503658574)
+
+3,11,2,15,11
+10,5,16,2,29
+13,15,10,14,2
+10,2,9,12,10
+8,8,15,10,8
+List(-0.0843259280628201, -0.7111753542278949, 0.8898889708811759, 0.9468239428495295)
+
+3,10,12,23,11
+4,6,11,10,2
+10,12,7,8,10
+7,8,10,13,19
+16,8,9,11,10
+List(-0.02848465045761777, -0.517260298491585, 0.9078142298078243, 0.9690005681124788)
+
+10,16,14,10,2
+1,10,2,12,18
+8,3,6,11,19
+10,14,21,10,5
+10,10,6,9,13
+List(-0.055608545175218016, -0.6903222903515915, 0.8972978690594, 0.9536943140799778)
+
+7,15,11,4,14
+5,6,14,10,3
+8,11,10,17,8
+6,6,10,10,7
+10,14,10,14,16
+List(-0.049987815656571725, -0.452973793236041, 0.898366008890221, 0.975969508188136)
+
+9,2,7,1,14
+7,9,10,14,18
+7,10,19,10,8
+13,12,10,15,13
+9,7,8,10,6
+List(-0.017497914031980765, -0.5389273533948592, 0.8634620095096537, 0.9695701875258742)
+
+2,10,10,6,17
+4,10,10,8,21
+18,6,14,10,14
+10,3,1,12,10
+19,5,4,16,10
+List(-0.023675586824867784, -0.6977727645736893, 0.9271643304738026, 0.951956654674636)
+
+3,4,10,10,7
+10,10,15,14,23
+5,2,20,10,3
+1,10,1,10,15
+4,19,17,10,17
+List(-0.02892570225227184, -0.843532965788042, 0.8673108110867962, 0.935641713463138)
+
+[0m[[32msuccess[0m] [0mTotal time: 9 s, completed 25 juin 2015 16:03:45[0m
+> ç
+[0m[[31merror[0m] [0mNot a valid command: ç[0m
+[0m[[31merror[0m] [0mNot a valid project ID: ç[0m
+[0m[[31merror[0m] [0mExpected ':' (if selecting a configuration)[0m
+[0m[[31merror[0m] [0mNot a valid key: ç[0m
+[0m[[31merror[0m] [0mç[0m
+[0m[[31merror[0m] [0m ^[0m
+> 
+> 
+> 
+> ç
+[0m[[31merror[0m] [0mNot a valid command: ç[0m
+[0m[[31merror[0m] [0mNot a valid project ID: ç[0m
+[0m[[31merror[0m] [0mExpected ':' (if selecting a configuration)[0m
+[0m[[31merror[0m] [0mNot a valid key: ç[0m
+[0m[[31merror[0m] [0mç[0m
+[0m[[31merror[0m] [0m ^[0m
+> ç[3G[Krun
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+10,8,9,13,18
+16,12,10,17,10
+10,14,10,1,10
+8,8,9,5,9
+1,10,10,13,9
+List(-1.0, -1.0, -1.0, -1.0)
+
+20,4,16,13,12
+10,10,4,7,10
+10,8,5,8,17
+10,11,6,6,10
+8,6,15,14,10
+List(-0.463492977251794, -0.04907103340455526, 0.9545240593401482, 0.9751463750173274)
+
+10,16,12,11,8
+2,10,11,12,10
+16,9,12,8,7
+4,15,13,10,11
+10,8,11,3,8
+List(-0.42222567056242666, -0.0657180574397295, 0.8771460452956725, 0.9783784754489603)
+
+[0m[[32msuccess[0m] [0mTotal time: 13 s, completed 25 juin 2015 16:04:42[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+10,8,9,13,18
+16,12,10,17,10
+10,14,10,1,10
+8,8,9,5,9
+1,10,10,13,9
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+
+20,4,16,13,12
+10,10,4,7,10
+10,8,5,8,17
+10,11,6,6,10
+8,6,15,14,10
+List(-0.463492977251794, -0.04907103340455526, 0.9545240593401482, 0.9751463750173274)
+
+10,16,12,11,8
+2,10,11,12,10
+16,9,12,8,7
+4,15,13,10,11
+10,8,11,3,8
+List(-0.42222567056242666, -0.0657180574397295, 0.8771460452956725, 0.9783784754489603)
+
+[0m[[32msuccess[0m] [0mTotal time: 8 s, completed 25 juin 2015 16:05:58[0m
+> run[3G[Krun
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+
+
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+49/-18(B[m)(B[m [33m8m6s(B[m [35m130(B[m [1m±(B[m sbt
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[33m⌂68%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+51/-18(B[m)(B[m [33m1m8s(B[m [35m130(B[m [1m±(B[m sbt[C -mem 4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+51/-18(B[m)(B[m [33m12s(B[m [35m130(B[m [1m±(B[m sbt -mem 4G[K[K[K[K[K[KJ-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[33m⌂79%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+51/-18(B[m)(B[m [33m1m17s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G[Ksbt
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}model(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+56/-25(B[m)(B[m [33m3m7s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/model/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[1m[33m⌂95%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+56/-25(B[m)(B[m [33m1m18s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[31m⌂103%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+57/-26(B[m)(B[m [33m1m48s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+2
+3
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[31m⌂104%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+58/-27(B[m)(B[m [33m1m22s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+^[[A  [0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+  > project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[31m⌂119%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+59/-28(B[m)(B[m [33m1m11s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+List(-1.3085345616861759, -0.022106131843234546, 0.9049117904294014, 0.8896477090864541)
+
+List(-1.056727661257558, -0.009659827479721403, 0.8915255106365605, 0.9104275963106582)
+
+List(-1.3226853946073343, -0.018794784249543825, 0.8838090508696094, 0.8964512554366746)
+
+List(-0.9958952726671284, -0.011117268457721343, 0.8989738309606874, 0.9337263887751233)
+
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+
+List(-1.3129719164613582, -0.012537273781360802, 0.9124197751354729, 0.9024346393831214)
+
+List(-0.9896991863694939, -0.014105634252925763, 0.9018276348068132, 0.9332120775037888)
+
+[0m[[32msuccess[0m] [0mTotal time: 160 s, completed 25 juin 2015 16:21:47[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+
+List(-0.893065800458689, -0.0017634188490883915, 0.9133324103165348, 0.9520627232789679)
+
+[0m[[32msuccess[0m] [0mTotal time: 356 s, completed 25 juin 2015 16:29:40[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+62/-31(B[m)(B[m [33m14m16s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+
+[0m[[32msuccess[0m] [0mTotal time: 80 s, completed 25 juin 2015 16:34:44[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[31merror[0m] [0m/home/reuillon/Documents/Recherche/Projects/spacematters/initialise/src/main/scala/fr/iscpif/spacematters/initialise/Initialise.scala:113: too many arguments for method nextDouble: ()Double[0m
+[0m[[31merror[0m] [0m      mutateWorld(flatWorld(size, avgCapacity), rng.nextDouble(avgCapacity), rng.nextInt(size * size))(rng)[0m
+[0m[[31merror[0m] [0m                                                              ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[31merror[0m] [0m(initialise/compile:[31mcompileIncremental[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed 25 juin 2015 16:36:16[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[1m[33m⌂98%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+66/-32(B[m)(B[m [33m4m26s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+2
+3
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+
+List(-0.023839918566087692, -0.00412903084721982, 0.9228446329676173, 0.9999303376616053)
+
+List(-0.2839024782336375, -0.006462254076174289, 0.9174761436076938, 0.9919691545846007)
+
+[0m[[32msuccess[0m] [0mTotal time: 48 s, completed 25 juin 2015 16:38:36[0m
+> run[3G[Krun
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[1m[33m⌂91%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+65/-31(B[m)(B[m [33m3m47s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> project initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run[3G[Kç[3G[Krun
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[1m[33m⌂96%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+66/-32(B[m)(B[m [33m1m37s(B[m [35m130(B[m [1m±(B[m sbt -J-Xmx4G
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=384m; support was removed in 8.0
+[0m[[0minfo[0m] [0mLoading global plugins from /home/reuillon/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/reuillon/Documents/Recherche/Projects/spacematters/project[0m
+[0m[[0minfo[0m] [0mSet current project to spacematters (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> 1[3G[Kproject initialise
+[0m[[0minfo[0m] [0mSet current project to initialise (in build file:/home/reuillon/Documents/Recherche/Projects/spacematters/)[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+2
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+
+List(-0.1686167718597369, -0.003871003726584845, 0.921294862077802, 0.9966675558513891)
+
+[0m[[32msuccess[0m] [0mTotal time: 63 s, completed 25 juin 2015 16:44:18[0m
+> run
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+2
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+
+List(-0.12832866100621762, -0.004721564024421618, 0.9239229696626259, 0.9979972449264845)
+
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+
+List(-0.02056814226690028, -3.3910910339636827E-4, 0.9230380159811581, 0.9999448552949551)
+
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+
+[0m[[32msuccess[0m] [0mTotal time: 59 s, completed 25 juin 2015 16:45:40[0m
+> run[3G[Kç[3G[Krun
+[0m[[0minfo[0m] [0mFormatting 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile) ...[0m
+[0m[[0minfo[0m] [0mReformatted 1 Scala source {file:/home/reuillon/Documents/Recherche/Projects/spacematters/}initialise(compile).[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/reuillon/Documents/Recherche/Projects/spacematters/initialise/target/scala-2.11/classes...[0m
+[0m[[33mwarn[0m] [0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mMultiple main classes detected.  Run 'show discoveredMainClasses' to see the list[0m
+
+Multiple main classes detected, select one to run:
+
+ [1] fr.iscpif.spacematters.initialise.IndicatorTest
+ [2] fr.iscpif.spacematters.initialise.Initialise
+
+Enter number: 2
+
+[0m[[0minfo[0m] [0mRunning fr.iscpif.spacematters.initialise.Initialise [0m
+1
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.06480019855313184, -0.002730285770244419, 0.9238432904858586, 0.9994855409792913)
+List(-0.12019356369063497, -0.002701017176553686, 0.9244992617810092, 0.9981688389895437)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10513667030948172, -0.001987534150070674, 0.9210445538197433, 0.9986816590912633)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.135569592853362, -0.004148828703006314, 0.921293850870284, 0.9977600543512332)
+List(-0.02000579012665977, -0.008872358036336897, 0.9236575767383058, 0.9999444673379693)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17756012031595034, -0.004993277367118208, 0.9224836485783244, 0.9962887059486182)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.08115493710294103, -0.004700103209737782, 0.9247685072893699, 0.999161416316519)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.14817843936269878, -2.8566124379974205E-4, 0.9205190703784778, 0.9974013540660047)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11202210815145901, -0.0020460736812126876, 0.9257920438779604, 0.9985228420001521)
+List(-0.1389421223201451, -1.631085560026918E-4, 0.9191590179776051, 0.9975921857596836)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+2
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10110917133326294, -0.004708036248156728, 0.9221427173374822, 0.9987553382787009)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.135569592853362, -0.004148828703006314, 0.921293850870284, 0.9977600543512332)
+List(-0.022319278728805705, -0.007885449914659589, 0.9224128020416468, 0.9999303876647078)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17756012031595034, -0.004993277367118208, 0.9224836485783244, 0.9962887059486182)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.1517011890832408, -0.0012289575697945452, 0.9204920532085293, 0.9972491783178674)
+List(-0.08070081215825288, -0.003771083619866875, 0.9249056001289367, 0.9990980597984254)
+List(-0.1448040536638707, 0.0010797719261255688, 0.9183419026570617, 0.9974691103293416)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.14306674113072476, -0.002533258235397604, 0.9218729667282283, 0.9975746869050959)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11202210815145901, -0.0020460736812126876, 0.9257920438779604, 0.9985228420001521)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+3
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10110917133326294, -0.004708036248156728, 0.9221427173374822, 0.9987553382787009)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17756012031595034, -0.004993277367118208, 0.9224836485783244, 0.9962887059486182)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.1517011890832408, -0.0012289575697945452, 0.9204920532085293, 0.9972491783178674)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.14405830512136086, -4.479348232824238E-4, 0.9178495996558479, 0.9974783069737491)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.1431660331793717, -0.0024592085020726413, 0.9214584272426182, 0.9975791579718831)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11202210815145901, -0.0020460736812126876, 0.9257920438779604, 0.9985228420001521)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+4
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10625833959771835, -0.003025683017447375, 0.9249971422672741, 0.9984982432961015)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17756012031595034, -0.004993277367118208, 0.9224836485783244, 0.9962887059486182)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.15433091324909218, -0.0013174373956275276, 0.9206828716954882, 0.9971772348296654)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.14696141448674793, -0.0042776376640205225, 0.922587345793335, 0.9973924338732468)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11304772454152602, -0.0018761046381605224, 0.925923840282696, 0.9985029508764423)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+5
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10625833959771835, -0.003025683017447375, 0.9249971422672741, 0.9984982432961015)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15050761251044095, 3.2840946991306207E-4, 0.917748177361549, 0.9972685559809222)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.1782216098887521, -0.005438548937567897, 0.9223221317157487, 0.9962612507130483)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.1551890518680347, -0.0012753175559898323, 0.9209364288682244, 0.9971568358376722)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11470611540587047, -0.0025400603850975227, 0.9258738622181988, 0.9984665079755003)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+6
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.18354312245287555, -0.005727639192165331, 0.9218047455136502, 0.9960793337264137)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10625833959771835, -0.003025683017447375, 0.9249971422672741, 0.9984982432961015)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15793718638766763, -3.7099706423473285E-4, 0.9181150901732521, 0.9970791133906609)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.1782216098887521, -0.005438548937567897, 0.9223221317157487, 0.9962612507130483)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11470611540587047, -0.0025400603850975227, 0.9258738622181988, 0.9984665079755003)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+7
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1829524758704911, -0.005504516758924859, 0.921813272140393, 0.9961060654460889)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10625833959771835, -0.003025683017447375, 0.9249971422672741, 0.9984982432961015)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.1782216098887521, -0.005438548937567897, 0.9223221317157487, 0.9962612507130483)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11659234649743604, -0.001093713238020458, 0.926567534041829, 0.9984402970353902)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+8
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1829524758704911, -0.005504516758924859, 0.921813272140393, 0.9961060654460889)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10625833959771835, -0.003025683017447375, 0.9249971422672741, 0.9984982432961015)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.1782216098887521, -0.005438548937567897, 0.9223221317157487, 0.9962612507130483)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.19531308505163186, -0.005262194369776498, 0.9227023868099303, 0.9956082674676648)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11794841434511197, -0.002152274922861741, 0.9262320741891145, 0.9984258194835662)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+9
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10334574528076958, -0.0030153262503386158, 0.9234627964490943, 0.9985971806262872)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.1782216098887521, -0.005438548937567897, 0.9223221317157487, 0.9962612507130483)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.210404272894858, -0.00613292426338848, 0.9225565542870197, 0.995013357145007)
+List(-0.19531308505163186, -0.005262194369776498, 0.9227023868099303, 0.9956082674676648)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.1179177896586966, -0.0021082720585900976, 0.9262373181242861, 0.9984265069464973)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+10
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.1782216098887521, -0.005438548937567897, 0.9223221317157487, 0.9962612507130483)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.2155098726537164, -0.0066596615481716945, 0.9224197677822095, 0.9948391936890263)
+List(-0.19531308505163186, -0.005262194369776498, 0.9227023868099303, 0.9956082674676648)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.1179177896586966, -0.0021082720585900976, 0.9262373181242861, 0.9984265069464973)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+11
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22027693667453677, -0.006358310915798624, 0.9226322498848388, 0.9946583305713238)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.1782216098887521, -0.005438548937567897, 0.9223221317157487, 0.9962612507130483)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.2155098726537164, -0.0066596615481716945, 0.9224197677822095, 0.9948391936890263)
+List(-0.19531308505163186, -0.005262194369776498, 0.9227023868099303, 0.9956082674676648)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11819634040537555, -0.0023066578718181517, 0.9261701582706304, 0.9984236981107787)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+12
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22827882642620542, -0.0059109146652777484, 0.9213837301125097, 0.9942902998656958)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17159188394548355, -0.006562151802300725, 0.9256386267341585, 0.9965368420292584)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.2155098726537164, -0.0066596615481716945, 0.9224197677822095, 0.9948391936890263)
+List(-0.19531308505163186, -0.005262194369776498, 0.9227023868099303, 0.9956082674676648)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11819634040537555, -0.0023066578718181517, 0.9261701582706304, 0.9984236981107787)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+13
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22827882642620542, -0.0059109146652777484, 0.9213837301125097, 0.9942902998656958)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(-0.2317624207954896, -0.005516481965180676, 0.9217170856398903, 0.9941727265953237)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17159188394548355, -0.006562151802300725, 0.9256386267341585, 0.9965368420292584)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.2155098726537164, -0.0066596615481716945, 0.9224197677822095, 0.9948391936890263)
+List(-0.19000261003193333, -0.006168489311444024, 0.9259514871256497, 0.9959160949311393)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11731114862304076, -0.0019193477475361947, 0.926302833825825, 0.998455491006739)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+14
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22827882642620542, -0.0059109146652777484, 0.9213837301125097, 0.9942902998656958)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(-0.2317624207954896, -0.005516481965180676, 0.9217170856398903, 0.9941727265953237)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17159188394548355, -0.006562151802300725, 0.9256386267341585, 0.9965368420292584)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.2155098726537164, -0.0066596615481716945, 0.9224197677822095, 0.9948391936890263)
+List(-0.1992231748170949, -0.0070045035611086635, 0.9269490134599873, 0.9955279892651039)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11731114862304076, -0.0019193477475361947, 0.926302833825825, 0.998455491006739)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+15
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22827882642620542, -0.0059109146652777484, 0.9213837301125097, 0.9942902998656958)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(-0.23223671226982498, -0.005083923990189925, 0.922065877843871, 0.9941585645358623)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17159188394548355, -0.006562151802300725, 0.9256386267341585, 0.9965368420292584)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.2155098726537164, -0.0066596615481716945, 0.9224197677822095, 0.9948391936890263)
+List(-0.1992231748170949, -0.0070045035611086635, 0.9269490134599873, 0.9955279892651039)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-0.20771624231959762, -0.0055133624597406465, 0.9274056383568694, 0.9951785835345895)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11731114862304076, -0.0019193477475361947, 0.926302833825825, 0.998455491006739)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+16
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22827882642620542, -0.0059109146652777484, 0.9213837301125097, 0.9942902998656958)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(-0.23223671226982498, -0.005083923990189925, 0.922065877843871, 0.9941585645358623)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17159188394548355, -0.006562151802300725, 0.9256386267341585, 0.9965368420292584)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.21830573018711472, -0.003438946858027105, 0.9286564649380833, 0.9947366583708992)
+List(-0.1992231748170949, -0.0070045035611086635, 0.9269490134599873, 0.9955279892651039)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-0.20771624231959762, -0.0055133624597406465, 0.9274056383568694, 0.9951785835345895)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11731114862304076, -0.0019193477475361947, 0.926302833825825, 0.998455491006739)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+17
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22827882642620542, -0.0059109146652777484, 0.9213837301125097, 0.9942902998656958)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(-0.23392856539647094, -0.005245641727422961, 0.9216126731038669, 0.9940953012875765)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17159188394548355, -0.006562151802300725, 0.9256386267341585, 0.9965368420292584)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.21830573018711472, -0.003438946858027105, 0.9286564649380833, 0.9947366583708992)
+List(-0.1992231748170949, -0.0070045035611086635, 0.9269490134599873, 0.9955279892651039)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-0.20771624231959762, -0.0055133624597406465, 0.9274056383568694, 0.9951785835345895)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11731114862304076, -0.0019193477475361947, 0.926302833825825, 0.998455491006739)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+18
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22827882642620542, -0.0059109146652777484, 0.9213837301125097, 0.9942902998656958)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.25054376393278405, -0.003058933089105563, 0.924036215122038, 0.9932988021175482)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(-0.23392856539647094, -0.005245641727422961, 0.9216126731038669, 0.9940953012875765)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17159188394548355, -0.006562151802300725, 0.9256386267341585, 0.9965368420292584)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.21830573018711472, -0.003438946858027105, 0.9286564649380833, 0.9947366583708992)
+List(-0.1992231748170949, -0.0070045035611086635, 0.9269490134599873, 0.9955279892651039)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-0.20771624231959762, -0.0055133624597406465, 0.9274056383568694, 0.9951785835345895)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11731114862304076, -0.0019193477475361947, 0.926302833825825, 0.998455491006739)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+19
+List(-0.04698743328079044, -0.0026209555018054747, 0.9222673506058041, 0.9997185315626088)
+List(-0.1809550732605182, -0.004427022900781245, 0.9209589240708772, 0.9963096389755776)
+List(-0.09935322698256428, -0.005946075208390261, 0.9221033575196613, 0.9987896873494314)
+List(-0.22827882642620542, -0.0059109146652777484, 0.9213837301125097, 0.9942902998656958)
+List(-0.060347941965318765, -0.0062765916086066735, 0.9223507380059796, 0.9995581235044566)
+List(-0.12553121842894116, -0.0038665439609879477, 0.9234782639170603, 0.9980135728725569)
+List(-0.3176280349474438, -0.0035956853004247224, 0.919563286337667, 0.990159868785431)
+List(-0.02043464925375568, -0.010686506231658895, 0.9226724105554218, 0.9999434285657952)
+List(-0.10584036402840358, -0.0037504402408498755, 0.9226670089773145, 0.9985345715357793)
+List(-0.014923114121710681, -0.0039022776174586745, 0.9229019418444321, 0.9999729551138457)
+List(-0.25054376393278405, -0.003058933089105563, 0.924036215122038, 0.9932988021175482)
+List(-0.13434643759421885, -0.003446661998600641, 0.9233023583582718, 0.9977552105416142)
+List(-0.023782126345573768, -0.006979283870769219, 0.9221771107168576, 0.9999228097438448)
+List(-0.15958549386331006, -0.0019698295205240694, 0.9193997848881232, 0.9970206523041525)
+List(-0.23392856539647094, -0.005245641727422961, 0.9216126731038669, 0.9940953012875765)
+List(0.0, 0.0, 0.9230400043678051, 0.9999999999999948)
+List(-0.17159188394548355, -0.006562151802300725, 0.9256386267341585, 0.9965368420292584)
+List(-0.08133459472630618, 0.006644250240768078, 0.9194688787546357, 0.9991603418623741)
+List(-0.21830573018711472, -0.003438946858027105, 0.9286564649380833, 0.9947366583708992)
+List(-0.1992231748170949, -0.0070045035611086635, 0.9269490134599873, 0.9955279892651039)
+List(-0.1575561960913158, -0.0034440082633954644, 0.9231716324355915, 0.9970556327872727)
+List(-0.2072020930329486, -0.0027490231516226703, 0.9194474364164947, 0.9952656333115375)
+List(-0.24280741840360762, 2.083337653781651E-4, 0.930066475661065, 0.9937533110509547)
+List(-0.0847415225004056, 0.005941974863038594, 0.9200839907766276, 0.9990933853487123)
+List(-0.1480720815548073, -4.2606874526428215E-5, 0.917645761666301, 0.9973653003839809)
+List(-0.05951220983921712, -0.005378450364796026, 0.9223724262092448, 0.999566314993413)
+List(-0.17079924897864915, -0.0026021192103075994, 0.9181411309745443, 0.996699628679228)
+List(-0.1477203077486573, -0.003918595017948665, 0.9221919807537196, 0.9973794635211332)
+List(-0.20771624231959762, -0.0055133624597406465, 0.9274056383568694, 0.9951785835345895)
+List(-Infinity, -Infinity, -Infinity, -Infinity)
+List(-0.1601055288590399, -0.00563213383794661, 0.9268307419092723, 0.9969180190115563)
+List(-0.03703686279577801, -0.004719948537226156, 0.9234421785085546, 0.9998293871421255)
+List(-0.07758475434915411, -0.0038057281360215625, 0.9248956582428741, 0.9991355610203361)
+List(-0.11731114862304076, -0.0019193477475361947, 0.926302833825825, 0.998455491006739)
+List(-0.13157492652435376, -0.003235577838752047, 0.9189662106331581, 0.9978438034922891)
+List(-0.12358844797046635, -0.003488180941952091, 0.9192954780391187, 0.9980958114264471)
+^C]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[1m[33m⌂99%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+64/-32(B[m)(B[m [33m13m44s(B[m [35m130(B[m [1m±(B[m git [K[K[K[Kgit add .
+]0;reuillon@simplet: /home/reuillon/Documents/Recherche/Projects/spacematters[1m[33m⌂84%(B[m [reuillon(B[m[32m:(B[m[1m~/Documents … e/Projects/spacematters(B[m] [31mmaster(B[m([35m+0/-0(B[m)(B[m [33m14s(B[m [1m±(B[m git commit -a
+[?1049h[1;39r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6 Fichier : ...llon/Documents/Recherche/Projects/spacematters/.git/COMMIT_EDITMSG          [4;1H(B[m# Veuillez saisir le message de validation pour vos modifications. Les lignes[5d# commençant par '#' seront ignorées, et un message vide abandonne la validation.[6d# Sur la branche master[7d# Votre branche est à jour avec 'origin/master'.[8d#[9d# Modifications qui seront validées :[10d#[9Gmodifié :[10;27Hinitialise/src/main/scala/fr/iscpif/spacematters/initialise/IndicatorTest.scala[11d#[9Gmodifié :[11;27Hinitialise/src/main/scala/fr/iscpif/spacematters/initialise/Initialise.scala[12d#[9Gmodifié :[12;27Hmodel/src/main/scala/fr/iscpif/spacematters/model/metric/Moran.scala[13d#[9Gmodifié :[13;27Hproject/Build.scala[14d#[37;42H(B[0;7m[ Lecture de 12 lignes ][38d^G(B[m Aide[38;18H(B[0;7m^O(B[m Écrire[38;35H(B[0;7m^R(B[m Lire fich.    (B[0;7m^Y(B[m Page préc.    (B[0;7m^K(B[m Couper[38;86H(B[0;7m^C(B[m Pos. cur.[39d(B[0;7m^X(B[m Quitter[18G(B[0;7m^J(B[m Justifier     (B[0;7m^W(B[m Chercher[52G(B[0;7m^V(B[m Page suiv.    (B[0;7m^U(B[m Coller[39;86H(B[0;7m^T(B[m Orthograp.[3d[2;36r[2;1HM[1;39r[1;98H(B[0;7mModifié[4d(B[m[AChange state.       e s[37d[K[3;9Htate generation parametr er.[37d(B[0;7mSa

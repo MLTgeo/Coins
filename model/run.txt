@@ -1,0 +1,4 @@
+
+run -t "../Inputs/EmpiricalRegions.txt" -r "/tmp/ResultsEmpirical" -d 0.18,0.18,0.01 -p 1.0,1.0,0.01 -m 0.1,0.1,0.01
+
+

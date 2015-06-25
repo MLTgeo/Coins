@@ -25,12 +25,17 @@ import java.io.File
 
 object Model {
 
-  def agentsToCityWallets(agents: Seq[Agent], cities: Seq[City]): Seq[Seq[Double]] = {
+  def agentsToCityWallets(agents: Seq[Agent], cities: Seq[City], s: Int): Seq[Seq[Double]] = {
     val wallets =
       agents.groupBy(_.city.id).toList.map {
-        case (c, a) =>
-          a.map(_.wallet.coins).transpose.map(_.sum / a.size)
-      }
+        case (cityId, agents) =>
+          cityId ->
+            agents.map {
+              a =>
+                assert(s != 0 || a.wallet.coins(cities(cityId).country) == 1.0)
+                a.wallet.coins
+            }.transpose.map { _.sum / agents.size }
+      }.toMap
     cities.map(c => wallets(c.id))
   }
 
@@ -134,10 +139,6 @@ trait Model <: Exchange {
      */
     def initialAgentsFromCity(source: City) = {
       val commutersValue = commuters(source, cities)
-      val nbCommuters =
-        commutersValue.map {
-          case (_, nbCommuters) => nbCommuters
-        }.sum
 
       val commuterDestinations = commutersValue.flatMap {
         case (destination, nbCommuters) => (0 until nbCommuters).map(_ => destination)
