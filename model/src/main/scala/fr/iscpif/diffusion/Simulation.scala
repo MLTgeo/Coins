@@ -62,7 +62,7 @@ object Simulation extends App {
     def saveState(s: Int, agents: Seq[Agent]) = {
       val citiesCoins = Model.agentsToCityWallets(agents, cities, s)
       val write = param.samples.map(_.contains(s)).getOrElse(true)
-      if (write) out.append(s"$distanceDecay,$populationWeight,$mobilRate,$replication,$s,${citiesCoins.mkString(",")}\n")
+      if (write) out.append(s"$distanceDecay,$populationWeight,$mobilRate,$replication,$s,${citiesCoins.flatten.mkString(",")}\n")
     }
 
     for {
